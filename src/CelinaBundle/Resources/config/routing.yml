@@ -1,0 +1,35 @@
+celina_user:
+    resource: "@CelinaBundle/Resources/config/routing/user.yml"
+    prefix:   /admin/user
+
+celina_homepage:
+    path:     /
+    defaults: { _controller: CelinaBundle:Default:index }
+
+celina_homepage_admin:
+    path:     /admin
+    defaults: { _controller: CelinaBundle:Default:backEnd }
+
+celina_color:
+    resource: "@CelinaBundle/Resources/config/routing/color.yml"
+    prefix:   /admin/color
+
+celina_category:
+    resource: "@CelinaBundle/Resources/config/routing/category.yml"
+    prefix:   /admin/category
+
+celina_product:
+    resource: "@CelinaBundle/Resources/config/routing/product.yml"
+    prefix:   /admin/product
+
+celina_fotodetalle:
+    resource: "@CelinaBundle/Resources/config/routing/fotodetalle.yml"
+    prefix:   /admin/fotodetalle
+
+celina_product_list:
+    path:     /productList/{categoryId}
+    defaults: { _controller: CelinaBundle:Default:productList }
+
+celina_fotodetalle_list:
+    path:     /fotodetalle/{productId}
+    defaults: { _controller: CelinaBundle:Default:productDetalle }

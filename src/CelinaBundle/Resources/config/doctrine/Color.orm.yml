@@ -1,0 +1,19 @@
+CelinaBundle\Entity\Color:
+    type: entity
+    table: null
+    repositoryClass: CelinaBundle\Repository\ColorRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        colorName:
+            type: string
+            length: 255
+        colorCodigo:
+            type: string
+            length: 255
+            unique: true
+    lifecycleCallbacks: {  }

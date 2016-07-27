@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Celina{% endblock %}</title>
+    <meta name="description" content="Ancien diplomé de l'Ecole Estienne en métiers de l'édition, mon chemin m'a finalement mené au cœur du digital. Bienvenue sur mon portfolio." />
+    <meta name="keywords" content="DA, Freelance, Direction artistique, Webdesign, Print, Identité visuelle, Webdesigner, Logos, E-commerce, Designer, Design, Illustration, Directeur artistique, Paris" />
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('bundles/celina/css/bootstrap.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/celina/css/celina.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/celina/css/cover.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/celina/css/button.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/celina/css/style.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/celina/css/stylesheet.css') }}" />
+    {% endblock %}
+    {% block javascripts %}
+        <script src="{{ asset('bundles/celina/js/jquery-1.6.2.min.js') }}"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+        <script src="{{ asset('bundles/celina/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('bundles/celina/js/celina.js') }}"></script>
+        <script src="{{ asset('bundles/celina/js/isotope.js') }}"></script>
+        <script src="{{ asset('bundles/celina/js/filtres-isotope.js') }}"></script>
+        <script src="{{ asset('bundles/celina/js/opacite-vignettes.js') }}"></script>
+        <script src="{{ asset('bundles/celina/js/scrolltop.js') }}"></script>
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+{% block body %}
+
+    <div class="site-wrapper-productList">
+        <div class="site-wrapper-inner">
+            <div class="cover-container">
+                <div class="masthead clearfix">
+                    <div class="inner">
+                        <h2 class="masthead-brand"><a href="{{ path('celina_homepage') }}">C E L I N A</a></h2>
+                        <nav>
+                            <ul class="nav masthead-nav">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Features</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="category">
+                    <li class="mujer">MUJER</li>
+                    <i class="empty-divider" role="separator">&nbsp;</i>
+                    {% for category in categories %}
+                        <li class="_category-link" data-categoryid="269183" tabindex="0">
+                            <a href="{{ path('celina_product_list', { 'categoryId': category.id }) }}">{{ category.categoryNameEs }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2">
+                {% for product in products %}
+                    <div class='col-sm-6 col-md-4 col-lg-3'>
+                        <a href="{{ path('celina_fotodetalle_list', { 'productId': product.id }) }}"><img src="{{ asset('uploads/fotos/' ~ product.foto) }}" height="320px"></a>
+                        <div class="product-info">
+                            <a class="" href="">{{ product.productNameEs }}</a>
+                            <div class="price _product-price"><span>{{ product.price }} EUR</span></div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="follow">
+            <a class="lien" href="" target="_blank"><img src="{{ asset('uploads/images/icon-twitter2.png') }}" alt="Suivez-moi sur Twitter"/><span>CELINA Twitter</span></a>
+            <a class="lien" href="" target="_blank"><img src="{{ asset('uploads/images/icon-tumblr.png') }}" alt="Suivez-moi sur Tumblr"/><span>CELINA Tumblr</span></a>
+            <a class="lien" href="" target="_blank"><img src="{{ asset('uploads/images/icon-linkedin.png') }}" alt="Suivez-moi sur Linkedin"/><span>CELINA Linkedin</span></a>
+            <a class="lien" href="" target="_blank"><img src="{{ asset('uploads/images/icon-viadeo.png') }}" alt="Suivez-moi sur Viadeo"/><span>CELINA Viadeo</span></a>
+        </div>
+        <span class="copyright">© 2016 CELINA S.L  Todos los derechos reservados</span>
+    </footer>
+    <div class="scrollToTop"><a href="#"><img class="img-scroll" src="{{ asset('uploads/images/fleche.jpg') }}"/></a></div>
+
+{% endblock %}
+
+</body>
+</html>

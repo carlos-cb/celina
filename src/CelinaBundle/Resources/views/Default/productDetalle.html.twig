@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Celina{% endblock %}</title>
+    <meta name="description" content="Ancien diplomé de l'Ecole Estienne en métiers de l'édition, mon chemin m'a finalement mené au cœur du digital. Bienvenue sur mon portfolio." />
+    <meta name="keywords" content="DA, Freelance, Direction artistique, Webdesign, Print, Identité visuelle, Webdesigner, Logos, E-commerce, Designer, Design, Illustration, Directeur artistique, Paris" />
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('bundles/celina/css/bootstrap.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/celina/css/celina.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/celina/css/cover.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/celina/css/button.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/celina/css/style.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/celina/css/stylesheet.css') }}" />
+    {% endblock %}
+    {% block javascripts %}
+        <script src="{{ asset('bundles/celina/js/jquery-1.6.2.min.js') }}"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+        <script src="{{ asset('bundles/celina/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('bundles/celina/js/celina.js') }}"></script>
+        <script src="{{ asset('bundles/celina/js/isotope.js') }}"></script>
+        <script src="{{ asset('bundles/celina/js/filtres-isotope.js') }}"></script>
+        <script src="{{ asset('bundles/celina/js/opacite-vignettes.js') }}"></script>
+        <script src="{{ asset('bundles/celina/js/scrolltop.js') }}"></script>
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+{% block body %}
+
+    <div class="site-wrapper-productList">
+        <div class="site-wrapper-inner">
+            <div class="cover-container">
+                <div class="masthead clearfix">
+                    <div class="inner">
+                        <h2 class="masthead-brand"><a href="{{ path('celina_homepage') }}">C E L I N A</a></h2>
+                        <nav>
+                            <ul class="nav masthead-nav">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Features</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="category">
+                    <li class="mujer">MUJER</li>
+                    <i class="empty-divider" role="separator">&nbsp;</i>
+                    {% for category in categories %}
+                        <li class="_category-link" data-categoryid="269183" tabindex="0">
+                            <a href="{{ path('celina_product_list', { 'categoryId': category.id }) }}">{{ category.categoryNameEs }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="col-sm-5 col-sm-offset-3 col-md-6 col-md-offset-2 fotodetalle">
+                {% for fotodetalle in fotodetalles %}
+                    <div class='col-sm-12 col-md-12 col-lg-12'>
+                        <a href="{{ asset('uploads/fotos/' ~ fotodetalle.fotodetalle) }}"><img src="{{ asset('uploads/fotos/' ~ fotodetalle.fotodetalle) }}" height="750px"></a>
+                        <div class="product-info">
+                            <a class="" href="">{{ fotodetalle.position }}</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="col-sm-4 col-md-4 purchase-column">
+                <section class="product-detail-purchase" data-module="productDetail, productDetailScrollSpy">
+                    <h1 class="product-name product-detail-product-name">{{ product.productNameEs }}</h1>
+                    <div class="product-price product-detail-price">
+                        <div class="price-column product-detail-price-column">
+                            <!-- // BUGFIX GR-3357  PDP - Fix mixed currency signs -->
+                            <span id="markedDown_full_Price" class="price">€ {{ product.price }}</span>
+                        </div>
+                    </div>
+                    <div class="product-info-wrapper">
+                        <div class="style-number-title">
+                            Ref: <span> {{ product.codigo }}</span>
+                        </div>
+
+                        <div class="product-style-selector">
+                            <div class="style-color-material" data-module="styleSelector">
+                        <span class="color-material">
+                                    <img alt="estampado de rosa" data-src_small="//media.gucci.com/style/Default_Center_0_0_35x35/1463092205/Swatch_432489_ZHZ81_3215_001_100_0000_Default.jpg" data-src_small_retina="//media.gucci.com/style/Default_Center_0_0_70x70/1463092205/Swatch_432489_ZHZ81_3215_001_100_0000_Default.jpg" data-src_medium="//media.gucci.com/style/Default_Center_0_0_35x35/1463092205/Swatch_432489_ZHZ81_3215_001_100_0000_Default.jpg" data-src_medium_retina="//media.gucci.com/style/Default_Center_0_0_70x70/1463092205/Swatch_432489_ZHZ81_3215_001_100_0000_Default.jpg" data-src_standard="//media.gucci.com/style/Default_Center_0_0_35x35/1463092205/Swatch_432489_ZHZ81_3215_001_100_0000_Default.jpg" data-src_standard_retina="//media.gucci.com/style/Default_Center_0_0_70x70/1463092205/Swatch_432489_ZHZ81_3215_001_100_0000_Default.jpg" data-src="//media.gucci.com/style/Default_Center_0_0_35x35/1463092205/Swatch_432489_ZHZ81_3215_001_100_0000_Default.jpg" src="//media.gucci.com/style/Default_Center_0_0_35x35/1463092205/Swatch_432489_ZHZ81_3215_001_100_0000_Default.jpg" class="_loaded">
+                                </span>
+                                <span class="color-material-name">estampado de rosa</span>
+
+                                <input id="styleId" type="hidden" name="styleId" value="1">
+                            </div>
+                            <!-- .style-color-material -->
+                        </div>
+                        <!-- .add-to-shopping-bag-form -->
+                        <div class="save-help talla" data-module="tooltip">
+                            <div class="selectric">
+                                <p class="label">Tallas</p>
+                            </div>
+                            <div class="guia" style="width: auto;">
+                                <div class="size-guide " style="">
+                                    <a class="size-guide-link overlay-open" href="#size-guide-overlay-shoes">
+                                        Guía de Tallas</a>
+                                </div>
+                            </div>
+                            <ul class="tallas">
+                                <li>XS</li>
+                                <li>S</li>
+                                <li>M</li>
+                                <li>L</li>
+                                <li>XL</li>
+                            </ul>
+                        </div>
+
+                        <div class="save-help" data-module="tooltip">
+                            <ul>
+                                <li>
+                                    <a class="save overlay-open main-product" href="#your-account-overlay" tabindex="-1" data-save-item="432489ZHZ813215">Guardar este artículo</a>
+                                </li>
+
+                                <li class="divider"></li>
+                                <li>
+                                    <a class="help  may-we-help" href="#tooltip-help">¿Necesita ayuda?</a>
+                                    <!-- <div id="tooltip-help" class="tooltip tooltip-help tooltip-mwh">
+                                        <ul>
+                                            <li class="email">
+                                                <a class="overlay-open simple-tabs-opener" href="#may-we-help-overlay" data-simple-tab-open="tab3">
+                                                    ENVIAR UN CORREO ELECTRÓNICO</a>
+                                            </li>
+                                            <li class="chat">
+                                        <a class="overlay-open simple-tabs-opener" href="#may-we-help-overlay" data-simple-tab-open="tab1">LIVE CHAT</a>
+                                    </li>
+                                        </ul>
+                                    </div>-->
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-details-nav">
+                            <ul>
+                                <li>
+                                    <a class="product-details-nav-product-details" href="#">
+                                        Detalles del producto</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="find-promo">
+                            <ul>
+                                <li class="promo-free">
+                                    Envío &amp; devolución gratuitos</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- .product-info-wrapper -->
+                    <input type="hidden" class="gucciProductName" value="Bomber de seda con estampado de rosa">
+                    <input type="hidden" class="gucciProductCode" value="432489ZHZ813215">
+                    <input type="hidden" class="gucciProductPrice" value="2980.0">
+                    <input type="hidden" class="gucciProductCategory" value="Women/Womens-Ready-to-Wear/Womens-Outerwear">
+                    <input type="hidden" class="gucciProductVariation" value="estampado de rosa">
+                    <input type="hidden" class="gucciProductPostion" value="3">
+                    <input type="hidden" class="gucciProductBrand" value="">
+                    <input type="hidden" class="gucciProductList" value="ProductGridComponent">
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="follow">
+            <a class="lien" href="" target="_blank"><img src="{{ asset('uploads/images/icon-twitter2.png') }}" alt="Suivez-moi sur Twitter"/><span>CELINA Twitter</span></a>
+            <a class="lien" href="" target="_blank"><img src="{{ asset('uploads/images/icon-tumblr.png') }}" alt="Suivez-moi sur Tumblr"/><span>CELINA Tumblr</span></a>
+            <a class="lien" href="" target="_blank"><img src="{{ asset('uploads/images/icon-linkedin.png') }}" alt="Suivez-moi sur Linkedin"/><span>CELINA Linkedin</span></a>
+            <a class="lien" href="" target="_blank"><img src="{{ asset('uploads/images/icon-viadeo.png') }}" alt="Suivez-moi sur Viadeo"/><span>CELINA Viadeo</span></a>
+        </div>
+        <span class="copyright">© 2016 CELINA S.L  Todos los derechos reservados</span>
+    </footer>
+    <div class="scrollToTop"><a href="#"><img class="img-scroll" src="{{ asset('uploads/images/fleche.jpg') }}"/></a></div>
+
+{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+{% extends 'CelinaBundle:BackEnd:index.html.twig' %}
+
+{% block menuslide %}
+    <ul class="nav nav-sidebar">
+        <li><a href="{{ path('celina_homepage_admin') }}">总览  <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">报告</a></li>
+        <li><a href="#">分析</a></li>
+    </ul>
+    <ul class="nav nav-sidebar">
+        <li><a href="{{ path('user_index') }}">用户管理</a></li>
+        <li><a href="{{ path('category_index') }}">分类管理</a></li>
+        <li class="active"><a href="{{ path('product_index') }}">产品管理</a></li>
+        <li><a href="{{ path('color_index') }}">颜色管理</a></li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <h1 class="sub-header">新产品细节图创建</h1>
+    <br>
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <br>
+        <input type="submit" class="button button-pill" value="创建" />
+        <a href="{{ path('fotodetalle_index', { 'productId': product.id }) }}" class="button button-pill">返回产品细节图列表</a>
+    {{ form_end(form) }}
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends 'CelinaBundle:BackEnd:index.html.twig' %}
+
+{% block menuslide %}
+    <ul class="nav nav-sidebar">
+        <li><a href="{{ path('celina_homepage_admin') }}">总览  <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">报告</a></li>
+        <li><a href="#">分析</a></li>
+    </ul>
+    <ul class="nav nav-sidebar">
+        <li><a href="{{ path('user_index') }}">用户管理</a></li>
+        <li><a href="{{ path('category_index') }}">分类管理</a></li>
+        <li class="active"><a href="{{ path('product_index') }}">产品管理</a></li>
+        <li><a href="{{ path('color_index') }}">颜色管理</a></li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <h1 class="sub-header">产品细节图管理</h1>
+    <h3>产品编号：{{ product.codigo }}</h3>
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>产品细节图</th>
+                <th>备注</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for fotodetalle in fotodetalles %}
+            <tr>
+                <td>{{ fotodetalle.id }}</td>
+                <td><a href="{{ asset('uploads/fotos/' ~ fotodetalle.fotodetalle) }}"><img src="{{ asset('uploads/fotos/' ~ fotodetalle.fotodetalle) }}" height="120px" width="100px"></a></td>
+                <td>{{ fotodetalle.position }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('fotodetalle_edit', { 'id': fotodetalle.id, 'productId': product.id }) }}">修改</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('fotodetalle_new', { 'productId': product.id }) }}" class="button button-rounded">创建新产品细节图</a>
+        </li>
+    </ul>
+{% endblock %}

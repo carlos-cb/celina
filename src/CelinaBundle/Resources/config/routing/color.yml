@@ -1,0 +1,24 @@
+color_index:
+    path:     /
+    defaults: { _controller: "CelinaBundle:Color:index" }
+    methods:  GET
+
+color_show:
+    path:     /{id}/show
+    defaults: { _controller: "CelinaBundle:Color:show" }
+    methods:  GET
+
+color_new:
+    path:     /new
+    defaults: { _controller: "CelinaBundle:Color:new" }
+    methods:  [GET, POST]
+
+color_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CelinaBundle:Color:edit" }
+    methods:  [GET, POST]
+
+color_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CelinaBundle:Color:delete" }
+    methods:  DELETE

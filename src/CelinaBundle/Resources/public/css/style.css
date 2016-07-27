@@ -1,0 +1,1438 @@
+﻿/* CSS Document */
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	background: transparent;
+	}
+
+
+
+body {
+	font-size: 12px;
+	line-height:14px;
+	color: #c1b497;
+    background-color: #ffffff;
+    margin: 0 auto;
+	overflow:scroll;
+    }
+
+a {
+	text-decoration:none;
+	color:#c1b497;
+	-webkit-transition:color .5s ease;
+    -moz-transition: color .5s ease;
+    -o-transition: color .5s ease;
+    transition: color .5s ease;
+    }
+a:link{
+	text-decoration:none;
+}
+a:active{
+	text-decoration:none;
+}
+a:visited{
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:none;
+   	color:#000000;
+    }
+
+p {
+	text-align:left;
+	}
+
+span {
+	text-align:left;
+	}
+
+
+/* ---------------------------------------------------------------------- CONTAINER ---------------------------------------------------------------------- */
+
+.main {
+    margin: 0 auto;
+    }
+
+
+
+/* ------------------------------------------------------------------------ HEADER ------------------------------------------------------------------------ */
+
+header {
+
+    height: 130px;
+	bottom: 20px;
+	margin:0px auto 55px auto;
+	border-bottom:solid 1px #ababab;
+	background-color: #28211b;
+	position:relative;
+	}
+
+.name {
+	font-family: 'Didot';
+    font-size: 1.7em;
+    text-align: center;
+    text-transform: uppercase;
+	position:absolute;
+	left:3%;
+	top:50%;
+	display:inline-block;
+	}
+
+.logo {
+	top:20px;
+	position:relative;
+	}
+
+ul.navigation1 {
+	font-family: Futura-400-normal, Helvetica,Arial,san-serif;
+    font-size: 1.1em;
+    text-align: right;
+    text-transform: uppercase;
+	display:inline-block;
+	position:absolute;
+	right:3%;
+	top:50%;
+	z-index:1000;
+	}
+
+ul.navigation1 li {
+	height: 50px;
+    display: inline;
+	}
+
+ul.navigation1 li a {
+	margin:0 5px 0 15px;
+	}
+
+ul.navigation1 li a:hover {
+    color:#ff282a;
+    }
+
+
+
+/* ------------------------------------------------------------------------ FOOTER ------------------------------------------------------------------------ */
+
+footer {
+	font-family: 'Didot-italic';
+	font-size:1.3em;
+    height:50px;
+	margin:70px auto 75px auto;
+	border-top:solid 1px #ababab;
+	padding-top:40px;
+	position:relative;
+	text-align:center;
+    }
+
+
+	
+.follow {
+	margin:0 auto 20px auto;
+	}		
+	
+	
+.scrollToTop{
+	position:fixed;
+	right:15px;
+	bottom:15px;
+    cursor:pointer;
+    width:50px;
+    height:50px;
+	z-index:100;
+	}
+	
+	
+
+/* ----------------------------------------------------------------------- HOMEPAGE ----------------------------------------------------------------------- */
+
+/*  ------------------------------------------ Animation texte ------------------------------------------ */
+
+.rw-wrapper{
+	position: relative;
+	}
+	
+.rw-sentence{
+	text-align: left;
+	}
+	
+.rw-sentence span{
+	color: #000;
+	}
+	
+.rw-words{
+	display: inline;
+	}
+
+.rw-words-1 span{
+	position: absolute;
+	opacity: 0;
+	overflow: hidden;
+	color: #fff2d9;
+	-webkit-animation: rotateWord 40s linear infinite 0s;
+	-moz-animation: rotateWord 40s linear infinite 0s;
+	-o-animation: rotateWord 40s linear infinite 0s;
+	-ms-animation: rotateWord 40s linear infinite 0s;
+	animation: rotateWord 40s linear infinite 0s;
+	}
+
+.rw-words-1 span:nth-child(2) { 
+    -webkit-animation-delay: 5s; 
+	-moz-animation-delay: 5s; 
+	-o-animation-delay: 5s; 
+	-ms-animation-delay: 5s; 
+	animation-delay: 5s; 
+	color: #fff2d9;
+	}
+
+.rw-words-1 span:nth-child(3) { 
+    -webkit-animation-delay: 10s; 
+	-moz-animation-delay: 10s; 
+	-o-animation-delay: 10s; 
+	-ms-animation-delay: 10s; 
+	animation-delay: 10s; 
+	color: #fff2d9;	
+	}
+
+.rw-words-1 span:nth-child(4) { 
+    -webkit-animation-delay: 15s;
+	-moz-animation-delay: 15s; 
+	-o-animation-delay: 15s; 
+	-ms-animation-delay: 15s; 
+	animation-delay: 15s; 
+	color: #fff2d9;
+	}
+
+.rw-words-1 span:nth-child(5) { 
+    -webkit-animation-delay: 20s; 
+	-moz-animation-delay: 20s; 
+	-o-animation-delay: 20s; 
+	-ms-animation-delay: 20s; 
+	animation-delay: 20s; 
+	color: #fff2d9;
+	}
+
+.rw-words-1 span:nth-child(6) { 
+    -webkit-animation-delay: 25s;
+	-moz-animation-delay: 25s; 
+	-o-animation-delay: 25s; 
+	-ms-animation-delay: 25s; 
+	animation-delay: 25s; 
+	color: #fff2d9;
+	}
+
+.rw-words-1 span:nth-child(7) { 
+    -webkit-animation-delay: 30s;
+	-moz-animation-delay: 30s; 
+	-o-animation-delay: 30s; 
+	-ms-animation-delay: 30s; 
+	animation-delay: 30s; 
+	color: #fff2d9;
+	}
+
+.rw-words-1 span:nth-child(8) { 
+    -webkit-animation-delay: 35s;
+	-moz-animation-delay: 35s; 
+	-o-animation-delay: 35s; 
+	-ms-animation-delay: 35s; 
+	animation-delay: 35s; 
+	color: #fff2d9;
+	}
+
+@-webkit-keyframes rotateWord {
+    0% { opacity: 0; }
+    1% { opacity: 0; }
+	3% { opacity: 1; }
+	13% { opacity: 1; }
+	15% { opacity: 0;}
+	20% { opacity: 0; }
+	80% { opacity: 0; }
+    100% { opacity: 0; }
+	}
+
+@-moz-keyframes rotateWord {
+    0% { opacity: 0; }
+    1% { opacity: 0; }
+	3% { opacity: 1; }
+	13% { opacity: 1; }
+	15% { opacity: 0;}
+	20% { opacity: 0; }
+	80% { opacity: 0; }
+    100% { opacity: 0; }
+	}
+
+@-o-keyframes rotateWord {
+    0% { opacity: 0; }
+    1% { opacity: 0; }
+	3% { opacity: 1; }
+	13% { opacity: 1; }
+	15% { opacity: 0;}
+	20% { opacity: 0; }
+	80% { opacity: 0; }
+    100% { opacity: 0; }
+	}
+
+@-ms-keyframes rotateWord {
+    0% { opacity: 0; }
+    1% { opacity: 0; }
+	3% { opacity: 1; }
+	13% { opacity: 1; }
+	15% { opacity: 0;}
+	20% { opacity: 0; }
+	80% { opacity: 0; }
+    100% { opacity: 0; }
+	}
+
+@keyframes rotateWord {
+    0% { opacity: 0; }
+    1% { opacity: 0; }
+	3% { opacity: 1; }
+	13% { opacity: 1; }
+	15% { opacity: 0;}
+	20% { opacity: 0; }
+	80% { opacity: 0; }
+    100% { opacity: 0; }
+	}
+
+
+/*  ------------------------------------------ Filtres ------------------------------------------ */
+
+ul.filteroptions { 
+	height: 65px;
+	text-align:center;	
+	margin-top:30px;
+    }
+
+ul.filteroptions li { 
+    height: 50px;
+    display: inline;
+    }
+
+ul.filteroptions li a {
+	font-family: 'DIN-LightRegular';
+	font-size:1.2em;
+	text-align:center;
+	text-transform:uppercase;
+	letter-spacing:2px;
+	font-weight:normal;
+	color: #25211e;
+	line-height: 40px;
+	text-decoration: none;
+	margin:0 7px 0 7px;
+	padding:10px 0;
+	}
+
+ul.filteroptions li a:hover {
+    color:#ff282a;
+    }
+
+ul.filteroptions li a.active { 
+	border-top:1px solid #999;
+	}
+
+
+
+/*  ------------------------------------------ Vignettes ------------------------------------------ */
+
+#content {
+	margin: 0 auto;
+	}
+
+.box {
+	margin:10px 10px;
+	}
+
+.vignette {
+	width:265px;
+	height:176px;
+	}
+	
+
+.vignette2 {
+	width:265px;
+	height:265px;
+	}	
+
+.vignette3 {
+	width:265px;
+	height:353px;
+	}	
+
+.box .info {
+	background: no-repeat rgba(0, 0, 0, 0.8);
+	opacity: 0;
+	/*-webkit-transition: opacity .5s ease;
+    -moz-transition: opacity .5s ease;
+    -o-transition: opacity .5s ease;
+    transition: opacity .5s ease;*/
+    left: 0;    
+	top: 0;
+    position: absolute;    
+	height:100%;
+	width:100%;
+	text-align:center;
+	-webkit-transition: all 500ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+-moz-transition: all 500ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+-o-transition: all 500ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+transition: all 500ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+	}
+
+	
+.box:hover .info {
+	opacity: 1;
+	}
+	
+	
+.box .text {   
+	font-family: 'Didot';
+	color: #fff;
+	padding: 50px 0;
+	text-align:center;
+	float:left;
+	border:none;
+	}
+
+
+.box .title {
+	font-family: 'Didot';
+	text-rendering: optimizeLegibility;
+	color: #fff;
+	text-transform:uppercase;
+	font-size:3em;
+	line-height:1em;
+	letter-spacing:0px;
+	}
+
+	
+.box .type {
+	font-family: 'Didot-italic';
+	padding-top:10px;
+	color: #ababab;
+    font-size:1.1em;
+    letter-spacing:0px;
+	text-transform:none;
+	}	
+	
+
+/*  ------------------------------------------ Filtres Isotopes ------------------------------------------ */
+
+.isotope-item {
+	z-index: 2;
+	}
+
+.isotope-hidden.isotope-item {
+	pointer-events: none;
+	z-index: 1;
+	}
+
+.isotope,
+.isotope .isotope-item {
+	/* change duration value to whatever you like */
+	-webkit-transition-duration: 0.8s;
+	-moz-transition-duration: 0.8s;
+	transition-duration: 0.8s;
+	}
+
+.isotope {
+	-webkit-transition-property: height, width;
+	-moz-transition-property: height, width;
+	transition-property: height, width;
+	}
+
+.isotope .isotope-item {
+	-webkit-transition-property: -webkit-transform, opacity;
+	-moz-transition-property: -moz-transform, opacity;
+	transition-property: transform, opacity;
+	}
+
+
+
+/* ------------------------------------------------------------------ PAGES INTERIEURES ------------------------------------------------------------------ */
+		
+.liens-projet {
+	width:auto;
+	height:50px;
+	text-align:center;
+	margin-top:30px;
+	background-color:#f3f3f3;
+	}
+	
+a.lien {
+	font-family: 'Didot-italic';
+	font-weight:normal;
+	font-size:1em;
+	color:#000;
+	margin: 0 10px;
+	position:relative;
+	z-index:24;
+	color:#000;
+	text-decoration:none
+	}
+ 
+a.lien:hover{
+	z-index:25;
+	}
+ 
+a.lien span{
+	display: none
+	}
+ 
+a.lien:hover span{
+	display:block;
+	position:absolute;
+	bottom:35px; left:-40px; width:130px;
+	color:#000;
+	text-align: center;
+	font-weight:none;
+	}
+	
+.visit {
+	font-family: 'DIN-LightRegular';
+	font-weight:normal;
+	font-size:1em;
+	color:#fff;
+	text-decoration:none;
+	background-color:#000;
+	padding:10px;
+	line-height:5em;
+	}
+ 
+.visit:hover{
+	color:#000;
+		background-color:#fff;
+			}	
+	
+.images-projet {
+	width:100%;
+	max-width:1140px;
+	}
+	
+.images-about {
+	width:100%;
+	max-width:1140px;
+		}	
+	
+.about-txt{
+	margin:0;
+	padding:20px 0 0;
+	line-height:2em;
+	font-family: 'DIN-LightRegular';
+	font-size:1em;
+	text-transform:uppercase;
+	letter-spacing:2px;
+	font-weight:normal;
+	}	
+
+.paragraphe-about {
+	height:auto;
+	border-bottom:solid 1px #ababab;
+	padding-bottom:50px;
+	}
+	
+.paragraphe-about2 {
+	height:auto;
+	padding-bottom:50px;
+	}	
+	
+	
+.awards {
+	width:auto;
+	min-height:65px;
+	}
+
+
+.award {
+	text-align:left;
+	width:auto;
+	min-width:100px;
+	height:65px;
+	float:left;
+	margin:0 45px 0 45px;
+	}
+
+.txt-award {
+	margin:0;
+	padding:0;
+	line-height:2em;
+	font-family: 'DIN-LightRegular';
+	font-size:1em;
+	text-transform:uppercase;
+	letter-spacing:2px;
+	font-weight:normal;
+	text-align:left;
+	}	
+
+	
+.image-award {
+	width:65px;
+	height:65px;
+	float:left;
+	margin-right:10px;
+	}	
+
+
+	
+/*  ------------------------------------------ Slider ------------------------------------------ */
+
+
+.slider-wrapper {
+	position:relative;
+    width:1080px;
+    height:780px;  
+	margin:20px auto; 
+	background:url(../images/loading.gif) no-repeat 50% 50%;
+	text-align:center;
+	}
+	
+.nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+	}
+
+.nivoSlider a {
+    border:0;
+    display:block;
+	}	
+	
+.nivo-controlNav {
+    position:absolute;
+	left:50%;
+	top:80%;
+	margin-left:-35px; 
+	}
+
+.nivo-controlNav a {
+    display:block;
+    width:10px;
+    height:10px;
+	cursor:pointer;
+    background:url(../images/bullets.png) no-repeat;
+    text-indent:-9999px;
+    border:0;
+    margin-right:10px;
+    float:left;
+	z-index:100;
+	position:relative;
+	}
+
+.nivo-controlNav a.active {
+    background-position: 0 -10px;
+	font-weight:bold;
+	}
+
+.nivo-directionNav a {
+	position:absolute;
+	top:45%;
+	width:40px;
+	height:40px;
+	text-indent:-9999px;
+	z-index:9;
+	cursor:pointer;
+	}
+
+.nivo-prevNav {
+	left:25px;
+	background:url(../images/arrows.png) no-repeat;
+	}
+
+.nivo-nextNav {
+	right:35px;
+	background:url(../images/arrows.png) no-repeat;
+	background-position:-30px 0;
+	}
+	
+	
+	
+/*  ------------------------------------------ Formulaire ------------------------------------------ */
+	
+.blocks p {
+	position:relative;
+	}	
+	
+
+.btn {
+	height:50px;
+	width:100%;
+	max-width:1140px;
+	margin:40px 0 0 0;
+	background-color:#000;
+	color:#fff;
+	font-family: 'DIN-LightRegular';
+	font-size:1em;
+	text-transform:uppercase;
+	letter-spacing:2px;
+	line-height:20px;
+	font-weight:normal;
+	border:none;
+	cursor:pointer;
+	-webkit-transition:background-color .5s ease;
+    -moz-transition: background-color .5s ease;
+    -o-transition: background-color .5s ease;
+    transition: background-color .5s ease;
+	}
+
+
+.btn:hover {
+	background-color:#fff;
+	color:#000;
+	}
+ 
+.text,
+.textarea {
+	height:30px;
+	border:1px solid #ddd;
+	color:#333;
+	font-family: 'DIN-LightRegular';
+	font-size:1em;
+	text-transform:uppercase;
+	letter-spacing:2px;
+	line-height:20px;
+	font-weight:normal;
+	z-index:2;
+	width:100%;
+	max-width:1120px;
+	padding:5px 10px;
+	}
+
+ 
+.textarea {
+	height:150px;
+	max-height:150px;
+	width:100%;
+	max-width:1120px;
+	}
+ 
+.blocks label {
+	float:left;
+	text-align:left;
+	font-family: 'DIN-LightRegular';
+	font-size:1em;
+	text-transform:uppercase;
+	letter-spacing:2px;
+	line-height:20px;
+	font-weight:normal;
+	padding-top:15px;
+}
+ 
+.blocks label.error,
+.blocks label.ok {
+	position:absolute;
+	z-index:2;
+	top:37px;
+	right:0;
+	padding:10px;
+	width:300px;
+	text-align:right;
+	margin:0;
+	background-repeat:no-repeat;	
+}
+ 
+.blocks label.ok {
+	color:#000;
+	z-index:2;
+
+	}
+ 
+.blocks label.error {
+	color:#ff282a;
+	z-index:2;	
+	background-position:188px 16px;
+
+}
+ 
+.area label.ok,
+.area label.error {
+	z-index:2;
+	background-position:1px 16px;
+}
+
+.requiredNote { margin: 20px 0px 20px; color: #333; font-weight: bold;}
+
+.success { 
+	font-family: 'DIN-LightRegular';
+	font-size:1em;
+	padding: 10px;
+	background: #000000;
+	text-transform:uppercase;
+	letter-spacing:2px;
+	line-height:20px;
+	font-weight:normal;
+	z-index:1000;
+	color: #fff;
+	width:100%;
+	height:100%;
+	margin-top:20px;
+	}
+	
+.success p { margin: 0px;}
+
+
+
+/* ------------------------------------------------------------------ RESPONSIVE DESIGN ------------------------------------------------------------------ */
+
+/*  ------------------------------------------ Mobile device ------------------------------------------ */
+
+@media screen and (max-width: 479px) {
+
+.main {	
+	width:96%;
+	}
+
+header {
+	width:100%;	
+	border-bottom:0;
+	margin:0px auto 25px auto;
+	height:140px;
+	}
+	
+.rw-wrapper { 
+	display:none;
+	}
+	
+.name {
+	display:none;
+	}
+		
+ul.navigation1 {
+	width:100%;
+    text-align: center;
+	margin:65px 0;
+	}
+		
+.logo {
+	width:100%;
+	text-align:center;
+	margin:20px 0;
+	}	
+		
+footer {
+	background-color: rgb(37, 33, 30);
+	width:100%;	
+	max-width:90%;
+	border-top:0;
+	margin:10px auto 25px auto;
+	}
+		
+ul.filteroptions { 
+	display:none;
+    }
+
+.box{
+	width:100%;
+	margin: 0 0 10px 0;
+	text-align:center;
+	}
+
+.vignette {
+	width:360px;
+	height:240px;
+	}
+	
+.vignette2 {
+	width:360px;
+	height:360px;
+	}	
+
+.vignette3 {
+	width:360px;
+	height:480px;
+	}
+
+.box .info {
+display:none;
+	}
+
+
+h1 {
+	font-size:3em;
+    line-height: 1em;
+    padding-bottom: 0px;
+    text-align: center;
+    text-transform: uppercase;
+	}
+	
+h2 { 
+	display:none;	
+	} 
+
+h3 { 
+	font-size:3em;
+	padding:15px 0 0 0;
+	} 
+
+a.lien:hover span {
+	display:block;
+	position:absolute;
+	bottom:25px; left:-40px; width:130px;
+	color:#000;
+	text-align: center;
+	font-weight:none;
+	}
+	
+.liens-projet {
+	margin-top:15px;
+	}	
+
+a.lien:hover span{
+	display:none;
+	}
+
+.slider-wrapper {
+display:none;
+	}
+	
+.images-about {
+	width:100%;
+	}
+
+.images-projet {
+	margin:5px auto;
+	}	
+
+.blocks label {
+	margin:0 25px;
+}
+	
+.textarea {
+	height:150px;
+	max-width:92%;
+	max-height:150px;
+	margin:0;
+}
+
+.text{
+	height:30px;
+	max-width:92%;
+	margin:0;
+	}
+
+ 	
+.btn {
+	max-width:98%;
+	margin:10px 0;
+	}	
+	
+
+	
+.blocks label.error,
+.blocks label.ok {
+	right:7%;
+	padding:10px;
+	font-size:0.9em;
+	line-height:1.2em;
+	 
+	/* Reseting previous label values */
+	width:120px;
+	text-align:right;
+	margin:0;
+	background-repeat:no-repeat;	
+}
+ 	
+	
+	
+.scrollToTop{
+	position:fixed;
+	right:0px;
+	bottom:0px;
+    cursor:pointer;
+    width:30px;
+    height:30px;
+	}
+
+.img-scroll{
+    width:30px;
+    height:30px;
+	}	
+
+.about-txt{
+	margin:0;
+	padding:0 10px;
+	line-height:2em;
+	font-family: 'DIN-LightRegular';
+	font-size:1em;
+	text-transform:uppercase;
+	letter-spacing:2px;
+	font-weight:normal;
+	}	
+
+.paragraphe-about {
+	height:auto;
+	border-bottom:solid 1px #ababab;
+	padding:15px;
+	}
+	
+.paragraphe-about2 {
+	height:auto;
+	padding:15px;
+	}	
+	
+.awards {
+	width:auto;
+	height:180px;
+	}
+
+
+.award {
+	text-align:left;
+	width:130px;
+	height:65px;
+	margin:10px auto;
+	}
+
+}
+
+
+
+/*  ------------------------------------------ Tablette device ------------------------------------------ */
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+		
+.main {
+		max-width:700px;
+		text-align:center;
+	}
+
+h1 { 
+	font-size:5em;
+	} 
+		
+h2 { 
+	padding:10px 25px 0 25px;
+	} 
+	
+h3 { 
+	font-size:3em;
+	padding:15px 0 0 0;
+	} 	
+
+ul.navigation1 {
+	right:6%;
+	z-index:1000;
+	}
+
+	
+.liens-projet {
+	margin-top:15px;
+	}	
+	
+header {
+	max-width:95%;
+	margin:0px auto 35px auto;
+	}
+.images-projet {
+	margin:5px auto;
+	}	
+	
+.vignette {
+	width:265px;
+	height:176px;
+	}
+	
+
+.vignette2 {
+	width:265px;
+	height:265px;
+	}	
+
+.vignette3 {
+	width:265px;
+	height:353px;
+	}			
+		
+	
+.rw-sentence { 
+	font-size: 5em;
+	padding:15px;
+	}
+	
+footer {
+	width:100%;	
+	max-width:95%;
+	}	
+	
+
+.images-about {
+	width:95%;
+	}
+	
+	
+.about-titre{
+	text-align:center;
+	padding:0;
+	}	
+	
+.about-txt{
+	text-align:center;
+	width:95%;
+	margin:0 auto 20px auto;
+	line-height:2em;
+	}	
+	
+.blocks label {
+	margin:0 15px;
+}
+	
+	
+.textarea {
+	height:150px;
+	max-width:97%;
+	max-height:150px;
+	margin:0;
+}
+
+.text{
+	height:30px;
+	width:97%;
+	margin:0;
+	}
+
+ 	
+.btn {
+	width:98%;
+	margin:20px 0;
+	}	
+
+.blocks label.error,
+.blocks label.ok {
+	position:absolute;
+	z-index:2;
+	top:37px;
+	right:4%;
+	padding:10px;
+}	
+	
+.scrollToTop{
+	position:fixed;
+	right:0px;
+	bottom:0px;
+    cursor:pointer;
+    width:30px;
+    height:30px;
+	}
+
+.img-scroll{
+    width:30px;
+    height:30px;
+	}
+	
+.about-txt{
+	margin:0;
+	padding:0 10px;
+	line-height:2em;
+	font-family: 'DIN-LightRegular';
+	font-size:1em;
+	text-transform:uppercase;
+	letter-spacing:2px;
+	font-weight:normal;
+	}	
+
+.paragraphe-about {
+	height:auto;
+	border-bottom:solid 1px #ababab;
+	padding:15px;
+	}
+	
+.paragraphe-about2 {
+	height:auto;
+	padding:15px;
+	}	
+	
+.awards {
+	width:auto;
+	height:300px;
+	}
+
+
+.award {
+	text-align:left;
+	width:220px;
+	height:65px;
+	margin:10px auto;
+	}
+	
+}
+
+
+/*  ------------------------------------------ Laptop device ------------------------------------------ */
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+		
+.main {
+	max-width:96%;
+	text-align:center;
+	}
+		
+h2 { 
+	padding:10px 25px 0 25px;
+	} 
+	
+h3 { 
+	font-size:4em;
+	padding:20px 0 0 0;
+	} 		
+	
+ul.navigation1 {
+	right:6%;
+	z-index:1000;
+	}	
+	
+.liens-projet {
+	margin-top:15px;
+	}	
+	
+header {
+	max-width:97%;
+	margin:0px auto 35px auto;
+	}
+	
+.rw-sentence { 
+	font-size: 6em;
+	padding:10px;
+	}
+	
+footer {
+	width:100%;	
+	max-width:97%;
+	}	
+	
+.vignette {
+	width:300px;
+	height:200px;
+	}
+	
+.vignette2 {
+	width:300px;
+	height:300px;
+	}	
+
+.vignette3 {
+	width:300px;
+	height:400px;
+	}	
+	
+
+.scrollToTop{
+	position:fixed;
+	right:0px;
+	bottom:0px;
+    cursor:pointer;
+    width:30px;
+    height:30px;
+	}
+
+.img-scroll{
+    width:30px;
+    height:30px;
+	}
+
+.images-projet {
+	margin:5px auto;
+	width:95%;
+	text-align:center;
+	}
+	
+.images-about {
+	width:97%;
+	}
+	
+.about-txt{
+	width:95%;
+	margin:0;
+	line-height:2em;
+	}	
+	
+.blocks label {
+	margin:0;
+}
+	
+.textarea {
+	height:150px;
+	max-width:97%;
+	max-height:150px;
+	margin:0;
+}
+
+.text{
+	height:30px;
+	width:97%;
+	margin:0;
+	}
+
+ 	
+.btn {
+	width:98%;
+	margin:20px 0;
+	}	
+
+.blocks label.error,
+.blocks label.ok {
+	position:absolute;
+	z-index:2;
+	top:37px;
+	right:4%;
+	padding:10px;
+}
+
+
+.paragraphe-about {
+	height:auto;
+	border-bottom:solid 1px #ababab;
+	padding:15px;
+	}
+	
+.paragraphe-about2 {
+	height:auto;
+	padding:15px;
+	}	
+	
+.awards {
+	width:auto;
+	height:200px;
+	margin-top:20px;
+	}
+
+
+.award {
+	text-align:left;
+	width:230px;
+	height:65px;
+	margin:10px auto;
+	}
+	
+	
+}
+
+
+/*  ------------------------------------------ Desktop device ------------------------------------------ */
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+
+.main {
+	max-width:100%;
+	text-align:center;
+	}
+
+header {
+	max-width:1140px;
+	}
+	
+ul.navigation1 {
+	right:5%;
+	z-index:1000;
+	}
+	
+.vignette {
+	width:265px;
+	height:176px;
+	}
+	
+
+.vignette2 {
+	width:265px;
+	height:265px;
+	}	
+
+.vignette3 {
+	width:265px;
+	height:353px;
+	}	
+		
+.images-projet {
+	margin:10px auto;
+	}	
+	
+header {
+	max-width:1140px;
+	}
+	
+.paragraphe-about {
+	height:auto;
+	border-bottom:solid 1px #ababab;
+	padding:15px;
+	}
+	
+.paragraphe-about2 {
+	height:auto;
+	padding:15px;
+	}	
+	
+.awards {
+	width:auto;
+	height:200px;
+	margin-top:20px;
+	}
+
+
+.award {
+	text-align:left;
+	width:300px;
+	height:65px;
+	margin:10px auto;
+	}
+	
+h3 { 
+	font-family: 'Didot';
+	font-weight:normal;
+	font-size:4em;
+	text-transform:uppercase; 
+	text-align:left;
+	line-height:0.9em;
+	padding:30px 0 20px 0;
+	} 	
+		
+}
+
+/*  ------------------------------------------ Desktop device ------------------------------------------ */
+
+@media screen and (min-width: 1201px) {
+
+.main {
+	max-width:1140px;
+	text-align:center;
+	}
+
+header {
+	max-width:1140px;
+	}
+	
+.vignette {
+	width:265px;
+	height:176px;
+	}
+	
+
+.vignette2 {
+	width:265px;
+	height:265px;
+	}	
+
+.vignette3 {
+	width:265px;
+	height:353px;
+	}	
+		
+.images-projet {
+	margin:10px auto;
+	}	
+	
+footer {
+	max-width:1140px;
+	}	
+}
+
+
+#design-award {position:absolute; right:0; top:0; z-index:100;}
+#design-award a {background: url(../images/design-award-red.png) no-repeat; display:block; height: 140px; width: 140px; text-indent: -9000px;}
+	

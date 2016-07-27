@@ -1,0 +1,24 @@
+fotodetalle_index:
+    path:     /{productId}
+    defaults: { _controller: "CelinaBundle:Fotodetalle:index" }
+    methods:  GET
+
+fotodetalle_show:
+    path:     /{id}/show
+    defaults: { _controller: "CelinaBundle:Fotodetalle:show" }
+    methods:  GET
+
+fotodetalle_new:
+    path:     /{productId}/new
+    defaults: { _controller: "CelinaBundle:Fotodetalle:new" }
+    methods:  [GET, POST]
+
+fotodetalle_edit:
+    path:     /{productId}/{id}/edit
+    defaults: { _controller: "CelinaBundle:Fotodetalle:edit" }
+    methods:  [GET, POST]
+
+fotodetalle_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CelinaBundle:Fotodetalle:delete" }
+    methods:  DELETE
