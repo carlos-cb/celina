@@ -8,11 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no">
     {% block stylesheets %}
         <link rel="stylesheet" href="{{ asset('bundles/celina/css/bootstrap.min.css') }}" />
-        <link rel="stylesheet" href="{{ asset('bundles/celina/css/celina.css') }}" />
         <link rel="stylesheet" href="{{ asset('bundles/celina/css/cover.css') }}" />
         <link rel="stylesheet" href="{{ asset('bundles/celina/css/button.css') }}" />
         <link rel="stylesheet" href="{{ asset('bundles/celina/css/style.css') }}" />
         <link rel="stylesheet" href="{{ asset('bundles/celina/css/stylesheet.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/celina/css/jquery.fancybox.css') }}" />
     {% endblock %}
     {% block javascripts %}
         <script src="{{ asset('bundles/celina/js/jquery-1.6.2.min.js') }}"></script>
@@ -23,12 +23,12 @@
         <script src="{{ asset('bundles/celina/js/filtres-isotope.js') }}"></script>
         <script src="{{ asset('bundles/celina/js/opacite-vignettes.js') }}"></script>
         <script src="{{ asset('bundles/celina/js/scrolltop.js') }}"></script>
+        <script src="{{ asset('bundles/celina/js/jquery.fancybox.pack.js') }}"></script>
     {% endblock %}
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 </head>
 <body>
 {% block body %}
-
     <div class="site-wrapper">
         <div class="site-wrapper-inner">
             <div class="cover-container">
@@ -37,8 +37,8 @@
                         <h2 class="masthead-brand"><a href="{{ path('celina_homepage') }}">C E L I N A</a></h2>
                         <nav>
                             <ul class="nav masthead-nav">
-                                <li><a href="#">Nuevo</a></li>
-                                <li><a href="#">Contacto</a></li>
+                                <li><a href="#category">Categorías</a></li>
+                                <li><a id="inline" href="#contacto">Contacto</a></li>
                                 <li><a href="#">English</a></li>
                             </ul>
                         </nav>
@@ -56,14 +56,15 @@
         </div>
     </div>
 
-
-    <div class="main">
+    <div class="main" id="main">
 
         <ul class="filteroptions option-set">
-            <li><a href="" data-filter="*" class="active">All</a></li>
+            <li><a href="#main" data-filter="*" class="active">TODAS LAS CATEGORÍAS </a></li>
+            <!-- Footer
             <li><a href="" data-filter=".cat1">Clothes</a></li>
             <li><a href="" data-filter=".cat2">Handbag</a></li>
             <li><a href="" data-filter=".cat3">Cap</a></li>
+             -->
         </ul>
 
         <div id="content">
@@ -168,6 +169,35 @@
 
         </div>
     </div>
+
+    <section style="display:none" id="contacto" class="overlay-content client-services-overlay-content">
+        <div class="client-services-header">
+            <h1 class="title-bottom-line-diamond client-services-title">
+                Contacta con nosotros <span class="client-services-country-copy">CELINA España</span>
+            </h1>
+        </div>
+        <div class="client-services-container" data-module="clientServices">
+            <div class="client-services-items">
+                <div class="client-services-section-title">
+                    Si tienes alguna duda, o quieres consultarnos algo<br> ¡te lo ponemos fácil!</div>
+                <div class="client-services-item-container">
+                    <div class="client-services-item">
+                        <div class="client-services-service">
+                            <div class="client-services-service-description">
+                                C/MANUEL COBO CALLEJA, 5<br>
+                                TEL: 91 425 88 14<br>
+                                celinaselection@hotmail.com
+                            </div>
+                        </div>
+                        <div class="client-services-actions">
+                            <a href="mailto:celinaselection@hotmail.com" target="_self" class="button-gold-outline client-services-link" data-content="client-services-email-us-8796289811160">Enviar un correo electrónico</a>
+                            <a href="mailto:celinaselection@hotmail.com" target="_self" class="button-gold-outline client-services-link" data-content="client-services-email-us-8796289811160">Enviar un correo electrónico</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
         <!-- Footer -->
         <footer>
             <div class="follow">
@@ -176,12 +206,11 @@
                 <a class="lien" href="" target="_blank"><img src="{{ asset('uploads/images/icon-linkedin.png') }}" alt="Suivez-moi sur Linkedin"/><span>CELINA Linkedin</span></a>
                 <a class="lien" href="" target="_blank"><img src="{{ asset('uploads/images/icon-viadeo.png') }}" alt="Suivez-moi sur Viadeo"/><span>CELINA Viadeo</span></a>
             </div>
-            <span class="copyright">© 2016 CELINA S.L  Todos los derechos reservados</span>
+            <span class="copyright">© 2016 CELINA S.L  Todos los derechos reservados<br><br>celinbaselection@hotmail.com</span>
         </footer>
         <div class="scrollToTop"><a href="#"><img class="img-scroll" src="{{ asset('uploads/images/fleche.jpg') }}"/></a></div>
 
 {% endblock %}
-
 
 </body>
 </html>
