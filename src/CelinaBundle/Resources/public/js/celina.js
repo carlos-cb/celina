@@ -10,8 +10,13 @@ $(function(){
 $(document).ready(function() {
 
     /* This is basic - uses default settings */
-
-    $("a#single_image").fancybox();
+    $("#single_4").fancybox({
+        helpers : {
+            title : {
+                type : 'over'
+            }
+        }
+    });
 
     /* Using custom settings */
 
