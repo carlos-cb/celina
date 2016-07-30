@@ -9,21 +9,20 @@
     <ul class="nav nav-sidebar">
         <li><a href="{{ path('user_index') }}">用户管理</a></li>
         <li><a href="{{ path('category_index') }}">分类管理</a></li>
-        <li><a href="{{ path('product_index') }}">产品管理</a></li>
-        <li class="active"><a href="{{ path('color_index') }}">颜色管理</a></li>
+        <li class="active"><a href="{{ path('product_index') }}">产品管理</a></li>
     </ul>
 {% endblock %}
 
 {% block content %}
     <h1 class="sub-header">颜色管理</h1>
-    <br>
+    <h3>产品编号：{{ product.codigo }}</h3>
     <table class="table table-bordered table-striped table-hover">
         <thead>
             <tr>
                 <th>ID</th>
-                <th>颜色名</th>
-                <th>颜色编号</th>
-                <th>颜色</th>
+                <th>颜色名西语</th>
+                <th>颜色名英语</th>
+                <th>产品颜色图片</th>
                 <th>操作</th>
             </tr>
         </thead>
@@ -31,9 +30,9 @@
         {% for color in colors %}
             <tr>
                 <td>{{ color.id }}</td>
-                <td>{{ color.colorName }}</td>
-                <td>{{ color.colorCodigo }}</td>
-                <td style="background-color: {{ color.colorCodigo }}"></td>
+                <td>{{ color.colorNameEs }}</td>
+                <td>{{ color.colorNameEn }}</td>
+                <td><a href="{{ asset('uploads/fotos/' ~ color.colorFoto) }}"><img src="{{ asset('uploads/fotos/' ~ color.colorFoto) }}" height="120px" width="100px"></a></td>
                 <td>
                     <ul>
                         <li>
@@ -48,7 +47,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('color_new') }}" class="button button-rounded">创建新颜色</a>
+            <a href="{{ path('color_new', { 'productId': product.id }) }}" class="button button-rounded">创建新产品颜色</a>
         </li>
     </ul>
 {% endblock %}

@@ -1,5 +1,5 @@
 color_index:
-    path:     /
+    path:     /{productId}
     defaults: { _controller: "CelinaBundle:Color:index" }
     methods:  GET
 
@@ -9,12 +9,12 @@ color_show:
     methods:  GET
 
 color_new:
-    path:     /new
+    path:     /{productId}/new
     defaults: { _controller: "CelinaBundle:Color:new" }
     methods:  [GET, POST]
 
 color_edit:
-    path:     /{id}/edit
+    path:     /{productId}/{id}/edit
     defaults: { _controller: "CelinaBundle:Color:edit" }
     methods:  [GET, POST]
 

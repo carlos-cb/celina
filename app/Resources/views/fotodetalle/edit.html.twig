@@ -10,13 +10,12 @@
         <li><a href="{{ path('user_index') }}">用户管理</a></li>
         <li><a href="{{ path('category_index') }}">分类管理</a></li>
         <li class="active"><a href="{{ path('product_index') }}">产品管理</a></li>
-        <li><a href="{{ path('color_index') }}">颜色管理</a></li>
     </ul>
 {% endblock %}
 
 {% block content %}
     <h1 class="sub-header">新产品细节图修改</h1>
-    <br>
+    <h3>产品编号：{{ product.codigo }}</h3>
     {{ form_start(edit_form) }}
         {{ form_widget(edit_form) }}
         <br>
@@ -27,7 +26,7 @@
     <ul>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" class="button button-border button-rounded button-primary" onclick="return confirm('确定删除?')" value="Delete">
+                <input type="submit" class="button button-border button-rounded button-primary" onclick="return confirm('确定删除?')" value="删除">
             {{ form_end(delete_form) }}
         </li>
     </ul>

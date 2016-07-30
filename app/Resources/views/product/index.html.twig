@@ -10,7 +10,6 @@
         <li><a href="{{ path('user_index') }}">用户管理</a></li>
         <li><a href="{{ path('category_index') }}">分类管理</a></li>
         <li class="active"><a href="{{ path('product_index') }}">产品管理</a></li>
-        <li><a href="{{ path('color_index') }}">颜色管理</a></li>
     </ul>
 {% endblock %}
 
@@ -48,7 +47,10 @@
                             <a href="{{ path('product_edit', { 'id': product.id }) }}">查看修改</a>
                         </li>
                         <li>
-                            <a href="{{ path('fotodetalle_index', { 'productId': product.id }) }}">细节图</a>
+                            <a href="{{ path('fotodetalle_index', { 'productId': product.id }) }}">细节图管理</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('color_index', { 'productId': product.id }) }}">颜色管理</a>
                         </li>
                     </ul>
                 </td>

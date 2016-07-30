@@ -23,7 +23,12 @@ class FileUploader
     public function remove($file)
     {
         $file_path = $this->targetDir.'/'.$file;
-        $isRemoved = unlink($file_path);
+        if(file_exists($file_path)){
+            $isRemoved = unlink($file_path);
+        }else{
+            $isRemoved = -1;
+        }
+
         return $isRemoved;
     }
 }

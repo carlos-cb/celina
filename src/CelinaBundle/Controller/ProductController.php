@@ -113,16 +113,50 @@ class ProductController extends Controller
      */
     public function deleteAction(Request $request, Product $product)
     {
+        $em = $this->getDoctrine()->getManager();
         $form = $this->createDeleteForm($product);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            //删除本身照片一张
             $file = $product->getFoto();
             if($file){
                 $isRemoved = $this->get('celina.foto_uploader')->remove($file);
             }
 
-            $em = $this->getDoctrine()->getManager();
+            $productId = $product->getId();
+            //删除细节图N张
+            $query = $em->createQuery("SELECT p FROM CelinaBundle:Fotodetalle p WHERE p.product=$productId");
+            $fotodetalles = $query->getResult();
+
+            if (is_array($fotodetalles) || is_object($fotodetalles))
+            {
+                foreach($fotodetalles as $fotodetalle){
+                    $file = $fotodetalle->getFotodetalle();
+                    if($file){
+                        $isRemoved = $this->get('celina.foto_uploader')->remove($file);
+                    }
+                    $em->remove($fotodetalle);
+                }
+                $em->flush();
+            }
+
+            //删除颜色图N张
+            $query = $em->createQuery("SELECT p FROM CelinaBundle:Color p WHERE p.product=$productId");
+            $colors = $query->getResult();
+
+            if (is_array($colors) || is_object($colors))
+            {
+                foreach($colors as $color){
+                    $file = $color->getColorFoto();
+                    if($file){
+                        $isRemoved = $this->get('celina.foto_uploader')->remove($file);
+                    }
+                    $em->remove($color);
+                }
+                $em->flush();
+            }
+
             $em->remove($product);
             $em->flush();
         }

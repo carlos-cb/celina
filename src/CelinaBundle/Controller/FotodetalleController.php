@@ -128,6 +128,11 @@ class FotodetalleController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $file = $fotodetalle->getFotodetalle();
+            if($file){
+                $isRemoved = $this->get('celina.foto_uploader')->remove($file);
+            }
+
             $em = $this->getDoctrine()->getManager();
             $em->remove($fotodetalle);
             $em->flush();

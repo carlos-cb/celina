@@ -15,17 +15,6 @@ class Color
     private $id;
 
     /**
-     * @var string
-     */
-    private $colorName;
-
-    /**
-     * @var string
-     */
-    private $colorCodigo;
-
-
-    /**
      * Get id
      *
      * @return integer 
@@ -34,57 +23,7 @@ class Color
     {
         return $this->id;
     }
-
-    /**
-     * Set colorName
-     *
-     * @param string $colorName
-     * @return Color
-     */
-    public function setColorName($colorName)
-    {
-        $this->colorName = $colorName;
-
-        return $this;
-    }
-
-    /**
-     * Get colorName
-     *
-     * @return string 
-     */
-    public function getColorName()
-    {
-        return $this->colorName;
-    }
-
-    /**
-     * Set colorCodigo
-     *
-     * @param string $colorCodigo
-     * @return Color
-     */
-    public function setColorCodigo($colorCodigo)
-    {
-        $this->colorCodigo = $colorCodigo;
-
-        return $this;
-    }
-
-    /**
-     * Get colorCodigo
-     *
-     * @return string 
-     */
-    public function getColorCodigo()
-    {
-        return $this->colorCodigo;
-    }
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
-    private $products;
-
+    
     /**
      * Constructor
      */
@@ -95,5 +34,119 @@ class Color
     
     public function __toString() {
         return strval($this->id);
+    }
+    /**
+     * @var string
+     */
+    private $colorNameEs;
+
+    /**
+     * @var string
+     */
+    private $colorNameEn;
+
+    /**
+     * @var string
+     */
+    private $colorFoto;
+
+
+    /**
+     * Set colorNameEs
+     *
+     * @param string $colorNameEs
+     * @return Color
+     */
+    public function setColorNameEs($colorNameEs)
+    {
+        $this->colorNameEs = $colorNameEs;
+
+        return $this;
+    }
+
+    /**
+     * Get colorNameEs
+     *
+     * @return string 
+     */
+    public function getColorNameEs()
+    {
+        return $this->colorNameEs;
+    }
+
+    /**
+     * Set colorNameEn
+     *
+     * @param string $colorNameEn
+     * @return Color
+     */
+    public function setColorNameEn($colorNameEn)
+    {
+        $this->colorNameEn = $colorNameEn;
+
+        return $this;
+    }
+
+    /**
+     * Get colorNameEn
+     *
+     * @return string 
+     */
+    public function getColorNameEn()
+    {
+        return $this->colorNameEn;
+    }
+
+    /**
+     * Set colorFoto
+     *
+     * @param string $colorFoto
+     * @return Color
+     */
+    public function setColorFoto($colorFoto)
+    {
+        if(!empty($colorFoto)) {
+            $this->colorFoto = $colorFoto;
+        }
+        
+        return $this;
+    }
+
+    /**
+     * Get colorFoto
+     *
+     * @return string 
+     */
+    public function getColorFoto()
+    {
+        return $this->colorFoto;
+    }
+    /**
+     * @var \CelinaBundle\Entity\Product
+     */
+    private $product;
+
+
+    /**
+     * Set product
+     *
+     * @param \CelinaBundle\Entity\Product $product
+     * @return Color
+     */
+    public function setProduct(\CelinaBundle\Entity\Product $product = null)
+    {
+        $this->product = $product;
+
+        return $this;
+    }
+
+    /**
+     * Get product
+     *
+     * @return \CelinaBundle\Entity\Product 
+     */
+    public function getProduct()
+    {
+        return $this->product;
     }
 }

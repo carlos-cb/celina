@@ -29,18 +29,10 @@ CelinaBundle\Entity\Product:
             length: 255
         size:
             type: array
-    manyToMany:
-      colors:
-        targetEntity: Color
-        joinTable:
-          name: products_colors
-          joinColumns:
-            product_id:
-              referencedColumnName: id
-          inverseJoinColumns:
-            color_id:
-              referencedColumnName: id
-              unique: true
+    oneToMany:
+        colors:
+            targetEntity: Color
+            mappedBy: product
     oneToMany:
         fotodetalles:
             targetEntity: Fotodetalle

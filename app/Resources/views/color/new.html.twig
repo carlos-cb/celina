@@ -9,20 +9,17 @@
     <ul class="nav nav-sidebar">
         <li><a href="{{ path('user_index') }}">用户管理</a></li>
         <li><a href="{{ path('category_index') }}">分类管理</a></li>
-        <li><a href="{{ path('product_index') }}">产品管理</a></li>
-        <li class="active"><a href="{{ path('color_index') }}">颜色管理</a></li>
+        <li class="active"><a href="{{ path('product_index') }}">产品管理</a></li>
     </ul>
 {% endblock %}
 
 {% block content %}
-    <h1 class="sub-header">新颜色创建</h1>
+    <h1 class="sub-header">新产品颜色创建</h1>
     <br>
     {{ form_start(form) }}
         {{ form_widget(form) }}
         <br>
-        <h3>请参照 <a href="http://www.colorhexa.com/color-names" target="_blank">colorhexa</a> 进行颜色的选择</h3>
-        <br>
         <input type="submit" class="button button-pill" value="创建" />
-        <a href="{{ path('color_index') }}" class="button button-pill">返回颜色列表</a>
+        <a href="{{ path('color_index', { 'productId': product.id }) }}" class="button button-pill">返回颜色列表</a>
     {{ form_end(form) }}
 {% endblock %}

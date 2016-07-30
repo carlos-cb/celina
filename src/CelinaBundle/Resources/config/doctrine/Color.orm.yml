@@ -9,11 +9,20 @@ CelinaBundle\Entity\Color:
             generator:
                 strategy: AUTO
     fields:
-        colorName:
+        colorNameEs:
             type: string
             length: 255
-        colorCodigo:
+        colorNameEn:
             type: string
             length: 255
-            unique: true
+        colorFoto:
+            type: string
+            length: 255
+    manyToOne:
+        product:
+            targetEntity: Product
+            inversedBy: colors
+            joinColumn:
+                name: product_id
+                referencedColumnName: id
     lifecycleCallbacks: {  }
