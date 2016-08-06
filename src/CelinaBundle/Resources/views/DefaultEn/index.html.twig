@@ -1,4 +1,4 @@
-{% extends 'font.html.twig' %}
+{% extends 'fontEn.html.twig' %}
 
 {% block body %}
     <div class="site-wrapper">
@@ -6,21 +6,21 @@
             <div class="cover-container">
                 <div class="masthead clearfix">
                     <div class="inner">
-                        <h2 class="masthead-brand"><a href="{{ path('celina_homepage') }}">C E L I N A</a></h2>
+                        <h2 class="masthead-brand"><a href="{{ path('celina_homepage_en') }}">C E L I N A</a></h2>
                         <nav>
                             <ul class="nav masthead-nav">
-                                <li><a href="{{ path('celina_homepage') }}#main">Categorías</a></li>
-                                <li><a id="inline" href="#contacto">Contacto</a></li>
-                                <li><a href="{{ path('celina_homepage_en') }}">English</a></li>
+                                <li><a href="{{ path('celina_homepage_en') }}#main">Categories</a></li>
+                                <li><a id="inline" href="#contacto">Contact</a></li>
+                                <li><a href="{{ path('celina_homepage') }}">Español</a></li>
                             </ul>
                         </nav>
                     </div>
                 </div>
                 <div class="coverimage" style="background-image: url(http://unelibanaiseaparis.com/wp-content/uploads/2013/08/campaign_woman_cover.jpg);">
                     <div class="inner cover">
-                        <h1 class="cover-heading">OTOÑO INVIERNO 2016</h1>
+                        <h1 class="cover-heading">AUTUMN WINTER 2016</h1>
                         <p class="lead">
-                            <a href="{{ path('celina_product_list_new') }}" type="button" class="button button-rounded" style="background:url(http://www.colorhexa.com/c1b497.png);color: #fff;">Ver Más</a>
+                            <a href="{{ path('celina_product_list_new_en') }}" type="button" class="button button-rounded" style="background:url(http://www.colorhexa.com/c1b497.png);color: #fff;">See more</a>
                         </p>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
     <div class="main" id="main">
 
         <ul class="filteroptions option-set">
-            <li><a href="#main" data-filter="*" class="active">TODAS LAS CATEGORÍAS </a></li>
+            <li><a href="#main" data-filter="*" class="active">ALL CATEGORIES </a></li>
             <!--   隐藏大分类栏
             <li><a href="" data-filter=".cat1">Clothes</a></li>
             <li><a href="" data-filter=".cat2">Handbag</a></li>
@@ -41,15 +41,15 @@
 
         <div id="content">
 
-            <div class="box cat1 cat3"><a href=""><img class="vignette2" src="{{ asset('uploads/images/vestidos.jpg') }}" alt="VESTIDOS">
-                    <span class="info"><span class="text"><span class="title">VESTIDOS</span><span class="type"><br/>/ VESTIDOS /</span></span></span></a>
+            <div class="box cat1 cat3"><a href=""><img class="vignette2" src="{{ asset('uploads/images/vestidos.jpg') }}" alt="DRESSES">
+                    <span class="info"><span class="text"><span class="title">DRESSES</span><span class="type"><br/>/ DRESSES /</span></span></span></a>
             </div>
 
             <div class="box cat1"><a href=""><img class="vignette3" src="{{ asset('uploads/images/monos.jpg') }}" alt="MONOS">
                     <span class="info"><span class="text"><span class="title">MONOS</span><span class="type"><br/>/ MONOS /</span></span></span></a>
             </div>
 
-            <div class="box cat1"><a href="{{ path('celina_product_list', { 'categoryId': 1 }) }}"><img class="vignette2" src="{{ asset('uploads/images/camisas.jpg') }}" alt="CAMISAS">
+            <div class="box cat1"><a href="{{ path('celina_product_list_en', { 'categoryId': 1 }) }}"><img class="vignette2" src="{{ asset('uploads/images/camisas.jpg') }}" alt="CAMISAS">
                     <span class="info"><span class="text"><span class="title">Sud<br />CAMISAS</span><span class="type"><br/>/ CAMISAS /</span></span></span></a>
             </div>
 

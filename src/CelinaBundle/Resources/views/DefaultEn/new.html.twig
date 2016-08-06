@@ -1,0 +1,52 @@
+{% extends 'fontEn.html.twig' %}
+
+{% block body %}
+
+    <div class="site-wrapper-productList">
+        <div class="site-wrapper-inner">
+            <div class="cover-container">
+                <div class="masthead clearfix">
+                    <div class="inner">
+                        <h2 class="masthead-brand"><a href="{{ path('celina_homepage_en') }}">C E L I N A</a></h2>
+                        <nav>
+                            <ul class="nav masthead-nav">
+                                <li><a href="{{ path('celina_homepage_en') }}#main">Categories</a></li>
+                                <li><a id="inline" href="#contacto">Contact</a></li>
+                                <li><a href="{{ path('celina_homepage') }}">Español</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="category">
+                    <li class="nuevo"><a href="{{ path('celina_product_list_new_en') }}">NEW IN</a></li>
+                    <i class="empty-divider" role="separator">&nbsp;</i>
+                    <li class="mujer">WOMAN</li>
+                    <i class="empty-divider" role="separator">&nbsp;</i>
+                    {% for category in categories %}
+                        <li class="_category-link" data-categoryid="{{ category.id }}" tabindex="0">
+                            <a href="{{ path('celina_product_list_en', { 'categoryId': category.id }) }}">{{ category.categoryNameEn }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2">
+                {% for product in products %}
+                    <div class='col-sm-6 col-md-4 col-lg-3'>
+                        <a href="{{ path('celina_fotodetalle_list_en', { 'productId': product.id }) }}"><img src="{{ asset('uploads/fotos/' ~ product.foto) }}" height="320px"></a>
+                        <div class="product-info">
+                            <a class="" href="">{{ product.productNameEn }}</a>
+                            <div class="price _product-price"><span>{{ product.price }} EUR</span></div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

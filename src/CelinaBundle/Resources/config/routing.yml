@@ -2,10 +2,6 @@ celina_user:
     resource: "@CelinaBundle/Resources/config/routing/user.yml"
     prefix:   /admin/user
 
-celina_homepage:
-    path:     /
-    defaults: { _controller: CelinaBundle:Default:index }
-
 celina_homepage_admin:
     path:     /admin
     defaults: { _controller: CelinaBundle:Default:backEnd }
@@ -26,6 +22,10 @@ celina_fotodetalle:
     resource: "@CelinaBundle/Resources/config/routing/fotodetalle.yml"
     prefix:   /admin/fotodetalle
 
+celina_homepage:
+    path:     /
+    defaults: { _controller: CelinaBundle:Default:index }
+
 celina_product_list:
     path:     /productList/{categoryId}
     defaults: { _controller: CelinaBundle:Default:productList }
@@ -37,3 +37,8 @@ celina_fotodetalle_list:
 celina_product_list_new:
     path:     /newproductList
     defaults: { _controller: CelinaBundle:Default:productListNew }
+
+celina_en:
+    resource: "@CelinaBundle/Resources/config/routing/en.yml"
+    prefix:   /en
+
