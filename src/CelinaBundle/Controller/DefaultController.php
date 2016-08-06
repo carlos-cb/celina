@@ -43,9 +43,29 @@ class DefaultController extends Controller
         $query = $em->createQuery("SELECT p FROM CelinaBundle:Fotodetalle p WHERE p.product=$productId");
         $fotodetalles = $query->getResult();
 
+        $query = $em->createQuery("SELECT p FROM CelinaBundle:Color p WHERE p.product=$productId");
+        $colors = $query->getResult();
+
         return $this->render('CelinaBundle:Default:productDetalle.html.twig', array(
             'fotodetalles' => $fotodetalles,
+            'colors' => $colors,
             'product' => $product,
+            'categories' => $categories,
+        ));
+    }
+
+    public function productListNewAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $categories = $em->getRepository('CelinaBundle:Category')->findAll();
+
+        //在此添加新产品的id值！！展示在ultima semana页面中
+        $query = $em->createQuery("SELECT p FROM CelinaBundle:Product p WHERE p.id in (14,20,21)");
+        $products = $query->getResult();
+
+        return $this->render('CelinaBundle:Default:new.html.twig', array(
+            'products' => $products,
             'categories' => $categories,
         ));
     }

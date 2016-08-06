@@ -44,12 +44,6 @@ class ProductType extends AbstractType
                 'expanded' => true,
                 'required' => false,
             ))
-            ->add('colors', NULL, array(
-                'label' => '颜色',
-                'property' => 'colorName',
-                'multiple' => true,
-                'expanded' => true,
-            ))
             ->add('description', 'text', array(
                 'label' => '备注',
                 'required' => false,

@@ -33,3 +33,7 @@ celina_product_list:
 celina_fotodetalle_list:
     path:     /fotodetalle/{productId}
     defaults: { _controller: CelinaBundle:Default:productDetalle }
+
+celina_product_list_new:
+    path:     /newproductList
+    defaults: { _controller: CelinaBundle:Default:productListNew }

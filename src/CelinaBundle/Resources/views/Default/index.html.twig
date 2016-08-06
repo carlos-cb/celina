@@ -1,31 +1,5 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8" />
-    <title>{% block title %}Celina{% endblock %}</title>
-    <meta name="description" content="Ancien diplomé de l'Ecole Estienne en métiers de l'édition, mon chemin m'a finalement mené au cœur du digital. Bienvenue sur mon portfolio." />
-    <meta name="keywords" content="DA, Freelance, Direction artistique, Webdesign, Print, Identité visuelle, Webdesigner, Logos, E-commerce, Designer, Design, Illustration, Directeur artistique, Paris" />
-    {% block stylesheets %}
-        <link rel="stylesheet" href="{{ asset('bundles/celina/css/bootstrap.min.css') }}" />
-        <link rel="stylesheet" href="{{ asset('bundles/celina/css/cover.css') }}" />
-        <link rel="stylesheet" href="{{ asset('bundles/celina/css/style.css') }}" />
-        <link rel="stylesheet" href="{{ asset('bundles/celina/css/stylesheet.css') }}" />
-        <link rel="stylesheet" href="{{ asset('bundles/celina/css/jquery.fancybox.css') }}" />
-    {% endblock %}
-    {% block javascripts %}
-        <script src="{{ asset('bundles/celina/js/jquery-1.6.2.min.js') }}"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-        <script src="{{ asset('bundles/celina/js/bootstrap.min.js') }}"></script>
-        <script src="{{ asset('bundles/celina/js/celina.js') }}"></script>
-        <script src="{{ asset('bundles/celina/js/isotope.js') }}"></script>
-        <script src="{{ asset('bundles/celina/js/filtres-isotope.js') }}"></script>
-        <script src="{{ asset('bundles/celina/js/opacite-vignettes.js') }}"></script>
-        <script src="{{ asset('bundles/celina/js/scrolltop.js') }}"></script>
-        <script src="{{ asset('bundles/celina/js/jquery.fancybox.pack.js') }}"></script>
-    {% endblock %}
-    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-</head>
-<body>
+{% extends 'font.html.twig' %}
+
 {% block body %}
     <div class="site-wrapper">
         <div class="site-wrapper-inner">
@@ -35,7 +9,7 @@
                         <h2 class="masthead-brand"><a href="{{ path('celina_homepage') }}">C E L I N A</a></h2>
                         <nav>
                             <ul class="nav masthead-nav">
-                                <li><a href="#main">Categorías</a></li>
+                                <li><a href="{{ path('celina_homepage') }}#main">Categorías</a></li>
                                 <li><a id="inline" href="#contacto">Contacto</a></li>
                                 <li><a href="#">English</a></li>
                             </ul>
@@ -46,7 +20,7 @@
                     <div class="inner cover">
                         <h1 class="cover-heading">OTOÑO INVIERNO 2016</h1>
                         <p class="lead">
-                            <a href="#" type="button" class="button button-rounded" style="background:url(http://www.colorhexa.com/c1b497.png);color: #fff;">Ver Más</a>
+                            <a href="{{ path('celina_product_list_new') }}" type="button" class="button button-rounded" style="background:url(http://www.colorhexa.com/c1b497.png);color: #fff;">Ver Más</a>
                         </p>
                     </div>
                 </div>
@@ -58,7 +32,7 @@
 
         <ul class="filteroptions option-set">
             <li><a href="#main" data-filter="*" class="active">TODAS LAS CATEGORÍAS </a></li>
-            <!-- Footer
+            <!--   隐藏大分类栏
             <li><a href="" data-filter=".cat1">Clothes</a></li>
             <li><a href="" data-filter=".cat2">Handbag</a></li>
             <li><a href="" data-filter=".cat3">Cap</a></li>
@@ -71,47 +45,37 @@
                     <span class="info"><span class="text"><span class="title">VESTIDOS</span><span class="type"><br/>/ VESTIDOS /</span></span></span></a>
             </div>
 
-
             <div class="box cat1"><a href=""><img class="vignette3" src="{{ asset('uploads/images/monos.jpg') }}" alt="MONOS">
                     <span class="info"><span class="text"><span class="title">MONOS</span><span class="type"><br/>/ MONOS /</span></span></span></a>
             </div>
-
 
             <div class="box cat1"><a href="{{ path('celina_product_list', { 'categoryId': 1 }) }}"><img class="vignette2" src="{{ asset('uploads/images/camisas.jpg') }}" alt="CAMISAS">
                     <span class="info"><span class="text"><span class="title">Sud<br />CAMISAS</span><span class="type"><br/>/ CAMISAS /</span></span></span></a>
             </div>
 
-
             <div class="box cat1"><a href=""><img class="vignette3" src="{{ asset('uploads/images/pantalones.jpg') }}" alt="PANTALONES">
                     <span class="info"><span class="text"><span class="title">PANTALONES</span><span class="type"><br/>/ PANTALONES /</span></span></span></a>
             </div>
-
 
             <div class="box cat1"><a href=""><img class="vignette" src="{{ asset('uploads/images/st-dupont_thumbnail.jpg') }}" alt="S.T. Dupont ">
                     <span class="info"><span class="text"><span class="title">S.T. Dupont</span><span class="type"><br/>/ E-commerce /</span></span></span></a>
             </div>
 
-
             <div class="box cat1"><a href=""><img class="vignette" src="{{ asset('uploads/images/pixmania_thumbnail.jpg') }}" alt="Pixmania.com">
                     <span class="info"><span class="text"><span class="title">Pixmania</span><span class="type"><br/>/ E-commerce &amp; customer experience /</span></span></span></a>
             </div>
-
 
             <div class="box cat2 cat3"><a href=""><img class="vignette2" src="{{ asset('uploads/images/filmscultes_thumbnail.jpg') }}" alt="Films cultes">
                     <span class="info"><span class="text"><span class="title">Black Posters</span><span class="type"><br/>/ Affiches /</span></span></span></a>
             </div>
 
-
             <div class="box cat2 cat3"><a href=""><img class="vignette2" src="{{ asset('uploads/images/lenthousiaste_thumbnail.jpg') }}" alt="L'Enthousiaste">
                     <span class="info"><span class="text"><span class="title">French<br /> Mustache<br /> Contest</span><span class="type"><br/>/ Affiche sérigraphiée /</span></span></span></a>
             </div>
 
-
             <div class="box cat2"><a href=""><img class="vignette3" src="{{ asset('uploads/images/cinema_thumbnail.jpg') }}" alt="French Film Festival">
                     <span class="info"><span class="text"><span class="title">French<br />Film<br />Festival</span><span class="type"><br/>/ Affiches /</span></span></span></a>
             </div>
-
-
 
             <div class="box cat1 cat2"><a href=""><img class="vignette3" src="{{ asset('uploads/images/vitaocean_thumbnail.jpg') }}" alt="Vitaocean">
                     <span class="info"><span class="text"><span class="title">Vita<br />ocean</span><span class="type"><br/>/ Design global /</span></span></span></a>
@@ -121,7 +85,6 @@
                     <span class="info"><span class="text"><span class="title">Adyoulike</span><span class="type"><br/>/ Identité visuelle &amp; webdesign /</span></span></span> </a>
             </div>
 
-
             <div class="box cat1"><a href=""><img class="vignette" src="{{ asset('uploads/images/fauchon_thumbnail.jpg') }}" alt="Fauchon" >
                     <span class="info"><span class="text"><span class="title">Fauchon</span><span class="type"><br/>/ E-commerce /</span></span></span></a>
             </div>
@@ -130,13 +93,10 @@
                     <span class="info"><span class="text"><span class="title">Photo</span><span class="type"><br/>/ Prises de vie... /</span></span></span></a>
             </div>
 
-
-
             <div class="box cat3"><a href=""><img class="vignette3" src="{{ asset('uploads/images/molette_thumbnail.jpg') }}" alt="Molette reprend du service" >
                     <span class="info"><span class="text"><span class="title">Molette reprend<br />du<br />service</span><span class="type"><br/>/ Livre illustré /</span></span></span></a>
 
             </div>
-
 
             <div class="box cat2"><a href=""><img class="vignette2" src="{{ asset('uploads/images/foci_thumbnail.jpg') }}" alt="Foci">
                     <span class="info"><span class="text"><span class="title">Foci</span><span class="type"><br/>/ Design global pour la marque /</span></span></span></a>
@@ -146,11 +106,9 @@
                     <span class="info"><span class="text"><span class="title">Loft Edition</span><span class="type"><br/>/ Identité visuelle &amp; webdesign /</span></span></span></a>
             </div>
 
-
             <div class="box cat1"><a href=""><img class="vignette2" src="{{ asset('uploads/images/citedessciences_thumbnail.jpg') }}" alt="Cité des sciences">
                     <span class="info"><span class="text"><span class="title">Cité des sciences</span><span class="type"><br/>/ Webdesign /</span></span></span></a>
             </div>
-
 
             <div class="box cat1"><a href=""><img class="vignette2" src="{{ asset('uploads/images/sinequanone_thumbnail.jpg') }}" alt="Sinequanone">
                     <span class="info"><span class="text"><span class="title">Sinequa-<br />none</span><span class="type"><br/>/ E-commerce /</span></span></span></a>
@@ -160,55 +118,11 @@
                     <span class="info"><span class="text"><span class="title">EADS</span><span class="type"><br/>/ Webdesign /</span></span></span></a>
             </div>
 
-
             <div class="box cat2"><a href=""><img class="vignette" src="{{ asset('uploads/images/parisjazz_thumbnail.jpg') }}" alt="Festival Paris Jazz">
                     <span class="info"><span class="text"><span class="title">Paris Jazz</span><span class="type"><br/>/ Identité visuelle /</span></span></span></a>
             </div>
-
         </div>
     </div>
 
-    <section style="display:none" id="contacto" class="overlay-content client-services-overlay-content">
-        <div class="client-services-header">
-            <h1 class="title-bottom-line-diamond client-services-title">
-                Contacta con nosotros <span class="client-services-country-copy">CELINA España</span>
-            </h1>
-        </div>
-        <div class="client-services-container" data-module="clientServices">
-            <div class="client-services-items">
-                <div class="client-services-section-title">
-                    Si tienes alguna duda, o quieres consultarnos algo<br> ¡te lo ponemos fácil!</div>
-                <div class="client-services-item-container">
-                    <div class="client-services-item">
-                        <div class="client-services-service">
-                            <div class="client-services-service-description">
-                                C/MANUEL COBO CALLEJA, 5<br>
-                                TEL: 91 425 88 14<br>
-                                celinaselection@hotmail.com
-                            </div>
-                        </div>
-                        <div class="client-services-actions">
-                            <a href="mailto:celinaselection@hotmail.com" target="_self" class="button-gold-outline client-services-link" data-content="client-services-email-us-8796289811160">Enviar un correo electrónico</a>
-                            <a href="mailto:celinaselection@hotmail.com" target="_self" class="button-gold-outline client-services-link" data-content="client-services-email-us-8796289811160">Enviar un correo electrónico</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-        <!-- Footer -->
-        <footer>
-            <div class="follow">
-                <a class="lien" href="" target="_blank"><img src="{{ asset('uploads/images/icon-twitter2.png') }}" alt="Suivez-moi sur Twitter"/><span>CELINA Twitter</span></a>
-                <a class="lien" href="" target="_blank"><img src="{{ asset('uploads/images/icon-tumblr.png') }}" alt="Suivez-moi sur Tumblr"/><span>CELINA Tumblr</span></a>
-                <a class="lien" href="" target="_blank"><img src="{{ asset('uploads/images/icon-linkedin.png') }}" alt="Suivez-moi sur Linkedin"/><span>CELINA Linkedin</span></a>
-                <a class="lien" href="" target="_blank"><img src="{{ asset('uploads/images/icon-viadeo.png') }}" alt="Suivez-moi sur Viadeo"/><span>CELINA Viadeo</span></a>
-            </div>
-            <span class="copyright">© 2016 CELINA S.L  Todos los derechos reservados<br><br>celinbaselection@hotmail.com</span>
-        </footer>
-        <div class="scrollToTop"><a href="#"><img class="img-scroll" src="{{ asset('uploads/images/fleche.jpg') }}"/></a></div>
 
 {% endblock %}
-
-</body>
-</html>

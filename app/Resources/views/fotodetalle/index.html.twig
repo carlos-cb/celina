@@ -15,7 +15,7 @@
 
 {% block content %}
     <h1 class="sub-header">产品细节图管理</h1>
-    <h3>产品编号：{{ product.codigo }}</h3>
+    <h3><a href="{{ path('product_edit', { 'id': product.id }) }}">产品编号：{{ product.codigo }}</a></h3>
     <table class="table table-bordered table-striped table-hover">
         <thead>
             <tr>

@@ -168,12 +168,18 @@ ul.category{
 ul.category li{
   margin: 10px 0px;
 }
-ul.category li a{
+ul.category li._category-link a{
   font-weight: bold;
   font-size: 14px;
   color: black;
 }
 .mujer{
+  font-weight: bold;
+  font-size: 24px;
+  color: black;
+}
+li.nuevo a{
+  margin-bottom: 20px;
   font-weight: bold;
   font-size: 24px;
   color: black;
@@ -298,35 +304,16 @@ ul.category li a{
   font-size: 16px;
 }
 .product-style-selector {
-  font-family: Futura-400-normal, Helvetica,Arial,san-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-}
-.product-style-selector .style-color-material {
-  border: 2px solid #c8c6c5;
-  padding: 2px;
-}
-.product-style-selector .style-color-material .color-material {
-  display: inline-block;
-  height: 35px;
-  line-height: 0;
-}
-.product-style-selector .style-color-material span {
-  vertical-align: top;
-}
-.product-style-selector .style-color-material .color-material img {
-  height: 35px;
-}
-.product-style-selector .style-color-material .color-material-name {
-  display: inline-block;
-  line-height: 35px;
-  margin-left: 10px;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.product-style-selector .style-color-material span {
-  vertical-align: top;
+   font-family: Futura-400-normal, Helvetica,Arial,san-serif;
+   font-style: normal;
+   font-weight: 400;
+   font-size: 12px;
+   margin-top: 10px;
+   margin-bottom: 20px;
+  text-align: center;
+ }
+.product-style-selector span{
+
 }
 
 
