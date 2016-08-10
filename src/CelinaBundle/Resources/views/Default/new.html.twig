@@ -12,7 +12,7 @@
                             <ul class="nav masthead-nav">
                                 <li><a href="{{ path('celina_homepage') }}#main">Categorías</a></li>
                                 <li><a id="inline" href="#contacto">Contacto</a></li>
-                                <li><a href="#">English</a></li>
+                                <li><a href="{{ path('celina_homepage_en') }}">English</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -40,6 +40,7 @@
                     <div class='col-sm-6 col-md-4 col-lg-3'>
                         <a href="{{ path('celina_fotodetalle_list', { 'productId': product.id }) }}"><img src="{{ asset('uploads/fotos/' ~ product.foto) }}" height="320px"></a>
                         <div class="product-info">
+                            <div class="price productNew"><span>一 new 一</span></div>
                             <a class="" href="">{{ product.productNameEs }}</a>
                             <div class="price _product-price"><span>{{ product.price }} EUR</span></div>
                         </div>

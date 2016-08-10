@@ -54,12 +54,41 @@ class DefaultEnController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $categories = $em->getRepository('CelinaBundle:Category')->findAll();
-
-        //在此添加新产品的id值！！展示在ultima semana页面中
-        $query = $em->createQuery("SELECT p FROM CelinaBundle:Product p WHERE p.id in (14,20,21)");
+        
+        $query = $em->createQuery("SELECT p FROM CelinaBundle:Product p WHERE p.isNew=1");
         $products = $query->getResult();
 
         return $this->render('CelinaBundle:DefaultEn:new.html.twig', array(
+            'products' => $products,
+            'categories' => $categories,
+        ));
+    }
+
+    public function productListSaleAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $categories = $em->getRepository('CelinaBundle:Category')->findAll();
+
+        $query = $em->createQuery("SELECT p FROM CelinaBundle:Product p WHERE p.isSale=1");
+        $products = $query->getResult();
+
+        return $this->render('CelinaBundle:DefaultEn:sale.html.twig', array(
+            'products' => $products,
+            'categories' => $categories,
+        ));
+    }
+
+    public function productListHotAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $categories = $em->getRepository('CelinaBundle:Category')->findAll();
+
+        $query = $em->createQuery("SELECT p FROM CelinaBundle:Product p WHERE p.isHot=1");
+        $products = $query->getResult();
+
+        return $this->render('CelinaBundle:DefaultEn:hot.html.twig', array(
             'products' => $products,
             'categories' => $categories,
         ));

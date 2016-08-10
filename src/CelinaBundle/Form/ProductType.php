@@ -33,6 +33,7 @@ class ProductType extends AbstractType
             ->add('size', 'choice', array(
                 'choices' => array(
                     'Única' => 'Única',
+                    'XS' => 'XS',
                     'S' => 'S',
                     'M' => 'M',
                     'L' => 'L',

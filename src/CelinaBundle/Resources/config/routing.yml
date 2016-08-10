@@ -38,6 +38,14 @@ celina_product_list_new:
     path:     /newproductList
     defaults: { _controller: CelinaBundle:Default:productListNew }
 
+celina_product_list_sale:
+    path:     /saleproductList
+    defaults: { _controller: CelinaBundle:Default:productListSale }
+
+celina_product_list_hot:
+    path:     /hotproductList
+    defaults: { _controller: CelinaBundle:Default:productListHot }
+
 celina_en:
     resource: "@CelinaBundle/Resources/config/routing/en.yml"
     prefix:   /en

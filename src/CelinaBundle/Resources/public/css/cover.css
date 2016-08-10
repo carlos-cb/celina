@@ -148,7 +148,7 @@ ul {
 
 .masthead{
   z-index:200;
-  background-color: #25211e;
+  background-color: #1c0e04;
   height: 130px;
 }
 .cover-heading{
@@ -204,7 +204,7 @@ li.nuevo a{
 .product-info{
   font-size: 14px;
   height: 70px;
-  padding-top: 20px;
+  padding-top: 5px;
   padding-bottom: 10px;
   margin-bottom: 15px;
   overflow: hidden;
@@ -224,6 +224,15 @@ li.nuevo a{
   margin-top: 5px;
   color: black;
   overflow: hidden;
+}
+.productNew{
+  margin-bottom: 5px;
+}
+span.sale{
+  color: #ce0013;
+}
+span.line-through{
+  text-decoration: line-through;
 }
 
 .purchase-column {

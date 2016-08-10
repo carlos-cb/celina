@@ -4,7 +4,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: #28211b;
+    background-color: #1c0e04;
     color: #fff;
     font-family: Arial;
     font-size: 12px;
@@ -14,7 +14,6 @@ body{
     position: absolute;
     width: auto;
     height: auto;
-    background-color: #28211b;
     -webkit-filter: blur(5px);
     z-index: 0;
 }
@@ -28,7 +27,7 @@ body{
 
 .header div{
     float: left;
-    color: #c1b497;
+    color: #ceb98a;
     font-family: 'Exo', sans-serif;
     font-size: 40px;
     font-weight: 400;

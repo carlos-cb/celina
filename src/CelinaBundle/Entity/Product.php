@@ -346,4 +346,116 @@ class Product
     {
         return $this->size;
     }
+    /**
+     * @var boolean
+     */
+    private $isHot;
+
+    /**
+     * @var boolean
+     */
+    private $isSale;
+
+    /**
+     * @var boolean
+     */
+    private $isNew;
+
+    /**
+     * @var float
+     */
+    private $discountPrice;
+
+
+    /**
+     * Set isHot
+     *
+     * @param boolean $isHot
+     * @return Product
+     */
+    public function setIsHot($isHot)
+    {
+        $this->isHot = $isHot;
+
+        return $this;
+    }
+
+    /**
+     * Get isHot
+     *
+     * @return boolean 
+     */
+    public function getIsHot()
+    {
+        return $this->isHot;
+    }
+
+    /**
+     * Set isSale
+     *
+     * @param boolean $isSale
+     * @return Product
+     */
+    public function setIsSale($isSale)
+    {
+        $this->isSale = $isSale;
+
+        return $this;
+    }
+
+    /**
+     * Get isSale
+     *
+     * @return boolean 
+     */
+    public function getIsSale()
+    {
+        return $this->isSale;
+    }
+
+    /**
+     * Set isNew
+     *
+     * @param boolean $isNew
+     * @return Product
+     */
+    public function setIsNew($isNew)
+    {
+        $this->isNew = $isNew;
+
+        return $this;
+    }
+
+    /**
+     * Get isNew
+     *
+     * @return boolean 
+     */
+    public function getIsNew()
+    {
+        return $this->isNew;
+    }
+
+    /**
+     * Set discountPrice
+     *
+     * @param float $discountPrice
+     * @return Product
+     */
+    public function setDiscountPrice($discountPrice)
+    {
+        $this->discountPrice = $discountPrice;
+
+        return $this;
+    }
+
+    /**
+     * Get discountPrice
+     *
+     * @return float 
+     */
+    public function getDiscountPrice()
+    {
+        return $this->discountPrice;
+    }
 }

@@ -13,3 +13,10 @@ celina_fotodetalle_list_en:
 celina_product_list_new_en:
     path:     /newproductList
     defaults: { _controller: CelinaBundle:DefaultEn:productListNew }
+
+celina_product_list_sale_en:
+    path:     /saleproductList
+
+celina_product_list_hot_en:
+    path:     /hotproductList
+    defaults: { _controller: CelinaBundle:DefaultEn:productListHot }

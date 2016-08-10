@@ -29,6 +29,15 @@ CelinaBundle\Entity\Product:
             length: 255
         size:
             type: array
+        isHot:
+            type: boolean
+        isSale:
+            type: boolean
+        isNew:
+            type: boolean
+        discountPrice:
+            type: float
+            nullable: true
     oneToMany:
         colors:
             targetEntity: Color
