@@ -33,6 +33,9 @@
                             <a href="{{ path('celina_product_list_en', { 'categoryId': category.id }) }}">{{ category.categoryNameEn }}</a>
                         </li>
                     {% endfor %}
+                    <li class="_category-link">
+                        <a href="{{ path('celina_product_list_sale_en') }}">SALE</a>
+                    </li>
                 </ul>
             </div>
 
