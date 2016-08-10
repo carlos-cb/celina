@@ -6,6 +6,10 @@ celina_homepage_admin:
     path:     /admin
     defaults: { _controller: CelinaBundle:Default:backEnd }
 
+celina_select:
+    resource: "@CelinaBundle/Resources/config/routing/select.yml"
+    prefix:   /admin/select
+
 celina_color:
     resource: "@CelinaBundle/Resources/config/routing/color.yml"
     prefix:   /admin/color

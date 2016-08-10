@@ -1,0 +1,11 @@
+select_new:
+    path:     /new
+    defaults: { _controller: "CelinaBundle:Select:selectNew" }
+
+select_hot:
+    path:     /hot
+    defaults: { _controller: "CelinaBundle:Select:selectHot" }
+
+select_sale:
+    path:     /sale
+    defaults: { _controller: "CelinaBundle:Select:selectSale" }
