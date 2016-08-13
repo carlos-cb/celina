@@ -49,6 +49,7 @@ ul {
 /* Padding for spacing */
 .inner {
   padding: 30px;
+  text-align: center;
 }
 
 
@@ -525,5 +526,12 @@ span.line-through{
 }
 .client-services-actions{
   font-size: 14px;
+}
+
+.indexlogo{
+  float: left;
+  position: absolute;
+  right: 45%;
+  bottom: 20px;
 }
 

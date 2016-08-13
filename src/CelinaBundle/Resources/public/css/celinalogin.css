@@ -17,7 +17,12 @@ body{
     -webkit-filter: blur(5px);
     z-index: 0;
 }
-
+.logo{
+    position: absolute;
+    top: calc(15% - 35px);
+    left: calc(40% - 55px);
+    z-index: 2;
+}
 .header{
     position: absolute;
     top: calc(51% - 35px);
