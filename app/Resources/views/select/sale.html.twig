@@ -19,17 +19,31 @@
 {% block content %}
     <h1 class="sub-header">打折选择</h1>
     <br>
-    <form class="form-inline">
+    <form class="form-inline" action="{{ path('add_sale') }}" method="post">
         <div class="form-group">
             <label for="codigo">产品编号</label>
-            <input type="text" class="form-control" id="codigo" placeholder="codigo" required="required">
+            <input type="text" class="form-control" id="codigo" name="codigo" placeholder="codigo" required="required">
         </div>
         <div class="form-group">
             <label for="price">折后价格</label>
-            <input type="text" class="form-control" id="price" placeholder="price" required="required">
+            <input type="number" step="0.01" class="form-control" id="price" name="price" placeholder="price" required="required">
         </div>
         <button type="submit" class="btn btn-default">添加打折产品</button>
     </form>
+    {% for flashMessage in app.session.flashbag.get('notice') %}
+
+        <div class="alert alert-danger">
+            {{ flashMessage }}
+        </div>
+
+    {% endfor %}
+    {% for flashMessage in app.session.flashbag.get('success') %}
+
+        <div class="alert alert-success">
+            {{ flashMessage }}
+        </div>
+
+    {% endfor %}
     <br>
     <table class="table table-bordered table-striped table-hover">
         <thead>
@@ -41,7 +55,7 @@
                 <th>产品编号</th>
                 <th>图片</th>
                 <th>所属分类</th>
-                <th>备注</th>
+                <th style="color: #ff0000">打折价格</th>
                 <th>操作</th>
             </tr>
         </thead>
@@ -55,9 +69,9 @@
                 <td>{{ product.codigo }}</td>
                 <td><a href="{{ asset('uploads/fotos/' ~ product.foto) }}"><img src="{{ asset('uploads/fotos/' ~ product.foto) }}" height="120px" width="100px"></a></td>
                 <td>{{ product.categoryName }}</td>
-                <td>{{ product.description }}</td>
+                <td style="color: #ff0000">{{ product.discountPrice }}</td>
                 <td>
-                    <a href="">取消折扣</a>
+                    <a href="{{ path('delete_sale', { 'id': product.id }) }}">取消折扣</a>
                 </td>
             </tr>
         {% endfor %}

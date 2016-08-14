@@ -2,10 +2,34 @@ select_new:
     path:     /new
     defaults: { _controller: "CelinaBundle:Select:selectNew" }
 
+add_new:
+    path:     /addnew
+    defaults: { _controller: "CelinaBundle:Select:addNew" }
+
+delete_new:
+    path:     /deletenew/{id}
+    defaults: { _controller: "CelinaBundle:Select:deleteNew" }
+
 select_hot:
     path:     /hot
     defaults: { _controller: "CelinaBundle:Select:selectHot" }
 
+add_hot:
+    path:     /addhot
+    defaults: { _controller: "CelinaBundle:Select:addHot" }
+
+delete_hot:
+    path:     /deletehot/{id}
+    defaults: { _controller: "CelinaBundle:Select:deleteHot" }
+
 select_sale:
     path:     /sale
     defaults: { _controller: "CelinaBundle:Select:selectSale" }
+
+add_sale:
+    path:     /addsale
+    defaults: { _controller: "CelinaBundle:Select:addSale" }
+
+delete_sale:
+    path:     /deletesale/{id}
+    defaults: { _controller: "CelinaBundle:Select:deleteSale" }
