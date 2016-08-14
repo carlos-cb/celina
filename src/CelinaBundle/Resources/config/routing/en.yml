@@ -10,6 +10,10 @@ celina_fotodetalle_list_en:
     path:     /fotodetalle/{productId}
     defaults: { _controller: CelinaBundle:DefaultEn:productDetalle }
 
+celina_fotodetalle_sale_en:
+    path:     /fotodetallesale/{productId}
+    defaults: { _controller: CelinaBundle:DefaultEn:productDetalleSale }
+
 celina_product_list_new_en:
     path:     /newproductList
     defaults: { _controller: CelinaBundle:DefaultEn:productListNew }

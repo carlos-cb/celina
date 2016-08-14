@@ -41,9 +41,9 @@
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2">
                 {% for product in products %}
                     <div class='col-sm-6 col-md-4 col-lg-3'>
-                        <a href="{{ path('celina_fotodetalle_list_en', { 'productId': product.id }) }}"><img src="{{ asset('uploads/fotos/' ~ product.foto) }}" height="320px"></a>
+                        <a href="{{ path('celina_fotodetalle_sale_en', { 'productId': product.id }) }}"><img src="{{ asset('uploads/fotos/' ~ product.foto) }}" height="320px"></a>
                         <div class="product-info">
-                            <a class="" href="">{{ product.productNameEn }}</a>
+                            <a class="" href="{{ path('celina_fotodetalle_sale_en', { 'productId': product.id }) }}">{{ product.productNameEn }}</a>
                             <div class="price _product-price">
                                 <span class="sale">{{ product.discountPrice }} EUR</span> -
                                 <span class="line-through">{{ product.price }} EUR</span>

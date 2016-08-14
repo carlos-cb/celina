@@ -22,7 +22,7 @@ class DefaultController extends Controller
 
         $categories = $em->getRepository('CelinaBundle:Category')->findAll();
 
-        $query = $em->createQuery("SELECT p FROM CelinaBundle:Product p WHERE p.category=$categoryId");
+        $query = $em->createQuery("SELECT p FROM CelinaBundle:Product p WHERE p.category=$categoryId and p.isSale=0");
         $products = $query->getResult();
         
         return $this->render('CelinaBundle:Default:productList.html.twig', array(
@@ -47,6 +47,29 @@ class DefaultController extends Controller
         $colors = $query->getResult();
 
         return $this->render('CelinaBundle:Default:productDetalle.html.twig', array(
+            'fotodetalles' => $fotodetalles,
+            'colors' => $colors,
+            'product' => $product,
+            'categories' => $categories,
+        ));
+    }
+
+    public function productDetalleSaleAction($productId)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $categories = $em->getRepository('CelinaBundle:Category')->findAll();
+
+        //获取产品信息
+        $product = $this->getProductInfo($productId);
+
+        $query = $em->createQuery("SELECT p FROM CelinaBundle:Fotodetalle p WHERE p.product=$productId");
+        $fotodetalles = $query->getResult();
+
+        $query = $em->createQuery("SELECT p FROM CelinaBundle:Color p WHERE p.product=$productId");
+        $colors = $query->getResult();
+
+        return $this->render('CelinaBundle:Default:productDetalleSale.html.twig', array(
             'fotodetalles' => $fotodetalles,
             'colors' => $colors,
             'product' => $product,

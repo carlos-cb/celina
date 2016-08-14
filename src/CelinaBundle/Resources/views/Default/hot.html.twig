@@ -44,7 +44,7 @@
                         <a href="{{ path('celina_fotodetalle_list', { 'productId': product.id }) }}"><img src="{{ asset('uploads/fotos/' ~ product.foto) }}" height="320px"></a>
                         <div class="product-info">
                             <div class="price productNew"><span>一 hot 一</span></div>
-                            <a class="" href="">{{ product.productNameEs }}</a>
+                            <a class="" href="{{ path('celina_fotodetalle_list', { 'productId': product.id }) }}">{{ product.productNameEs }}</a>
                             <div class="price _product-price"><span>{{ product.price }} EUR</span></div>
                         </div>
                     </div>
