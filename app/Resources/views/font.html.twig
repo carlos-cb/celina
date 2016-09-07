@@ -6,6 +6,7 @@
         <meta name="description" content=""/>
         <meta name="keywords" content=""/>
         {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('bundles/celina/css/index.css') }}" />
             <link rel="stylesheet" href="{{ asset('bundles/celina/css/bootstrap.min.css') }}" />
             <link rel="stylesheet" href="{{ asset('bundles/celina/css/cover.css') }}" />
             <link rel="stylesheet" href="{{ asset('bundles/celina/css/button.css') }}" />
@@ -27,6 +28,7 @@
                 <div class="client-services-items">
                     <div class="client-services-section-title">
                         Si tienes alguna duda, o quieres consultarnos algo<br> ¡te lo ponemos fácil!</div>
+                    <div class="fancyGoldenSeperator"></div>
                     <div class="client-services-item-container">
                         <div class="client-services-item">
                             <div class="client-services-service">
@@ -45,7 +47,7 @@
             </div>
         </section>
         <!-- Footer -->
-        <footer>
+        <footer id="footer">
             <div class="follow">
                 <a class="lien" href="" target="_blank"><img src="{{ asset('uploads/images/icon-twitter2.png') }}" alt="Suivez-moi sur Twitter"/><span>CELINA Twitter</span></a>
                 <a class="lien" href="" target="_blank"><img src="{{ asset('uploads/images/icon-tumblr.png') }}" alt="Suivez-moi sur Tumblr"/><span>CELINA Tumblr</span></a>

@@ -42,3 +42,29 @@ $(document).ready(function() {
     });
 
 });
+
+window.onload = function(){
+    function box(){
+        var yifu1 = document.getElementById('zhanshi1');
+        var yifu2 = document.getElementById('zhanshi2');
+        var yifu3 = document.getElementById('zhanshi3');
+        var yifu4 = document.getElementById('zhanshi4');
+        var L1 = yifu1.offsetWidth;
+        var H1 = yifu1.offsetHeight;
+
+        var ww = document.documentElement.clientWidth*0.37;
+        var hh = ww*1.42;
+        yifu1.style.width = ww+'px';
+        yifu1.style.height = hh+'px';
+        yifu2.style.width = ww+'px';
+        yifu2.style.height = hh+'px';
+        yifu3.style.width = ww+'px';
+        yifu3.style.height = hh+'px';
+        yifu4.style.width = ww+'px';
+        yifu4.style.height = hh+'px';
+    }
+    box();
+    window.onresize = function(){
+        box();
+    }
+};

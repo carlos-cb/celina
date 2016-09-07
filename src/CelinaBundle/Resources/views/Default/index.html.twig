@@ -1,6 +1,7 @@
 {% extends 'font.html.twig' %}
 
 {% block body %}
+    <div id="body">
     <div class="site-wrapper">
         <div class="site-wrapper-inner">
             <div class="cover-container">
@@ -10,9 +11,9 @@
                         <img class="indexlogo" src="{{ asset('uploads/images/indexlogo.jpg') }}">
                         <nav>
                             <ul class="nav masthead-nav">
-                                <li><a href="{{ path('celina_homepage') }}#main">Categorías</a></li>
-                                <li><a id="inline" href="#contacto">Contacto</a></li>
-                                <li><a href="{{ path('celina_homepage_en') }}">English</a></li>
+                                <li><a href="{{ path('celina_product_list_hot') }}">MEJOR VENDIDO</a></li>
+                                <li><a id="inline" href="#contacto">CONTACTO</a></li>
+                                <li><a href="{{ path('celina_homepage_en') }}">ENGLISH</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -29,7 +30,7 @@
         </div>
     </div>
 
-    <div class="main" id="main">
+    <div class="main" id="main" style="display: none">
 
         <ul class="filteroptions option-set">
             <li><a href="#main" data-filter="*" class="active">TODAS LAS CATEGORÍAS </a></li>
@@ -125,5 +126,50 @@
         </div>
     </div>
 
-
+    <div class="container-fluid">
+        <div class="row mokuai">
+            <div class="col-xs-6 col-md-6">
+                <div class="hovereffect">
+                    <img class="zhanshi" id="zhanshi1" src="{{ asset('uploads/images/left1.jpg') }}" alt="celina">
+                    <div class="overlay">
+                        <h2 onclick="onclick=window.location.href='{{ path('celina_product_list', { 'categoryId': 1 }) }}'">BLUSAS</h2>
+                        <h2 onclick="onclick=window.location.href='{{ path('celina_product_list', { 'categoryId': 2 }) }}'">JEANS</h2>
+                        <h2 onclick="onclick=window.location.href='{{ path('celina_product_list', { 'categoryId': 4 }) }}'">ABRIGOS</h2>
+                        <h2 onclick="onclick=window.location.href='{{ path('celina_product_list', { 'categoryId': 5 }) }}'">VESTIDOS</h2>
+                        <h2 onclick="onclick=window.location.href='{{ path('celina_product_list', { 'categoryId': 6 }) }}'">MONOS</h2>
+                        <h2 onclick="onclick=window.location.href='{{ path('celina_product_list', { 'categoryId': 7 }) }}'">PANTALONES</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="hover08 col-xs-6 col-md-6">
+                <a href="{{ path('celina_product_list_new') }}">
+                    <figure>
+                    <img class="zhanshi" id="zhanshi2" src="{{ asset('uploads/images/right2.jpg') }}" alt="celina">
+                    </figure>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="hover08 col-xs-6 col-md-6">
+                <a href="{{ path('celina_product_list_sale') }}">
+                    <figure>
+                    <img class="zhanshi" id="zhanshi3" src="{{ asset('uploads/images/left2.jpg') }}" alt="celina">
+                    </figure>
+                </a>
+            </div>
+            <div class="col-xs-6 col-md-6">
+                <div class="hovereffect">
+                    <img class="zhanshi" id="zhanshi4" src="{{ asset('uploads/images/right1.jpg') }}" alt="celina">
+                    <div class="overlay">
+                        <h2 onclick="onclick=window.location.href='{{ path('celina_product_list', { 'categoryId': 8 }) }}'">SHORTS</h2>
+                        <h2 onclick="onclick=window.location.href='{{ path('celina_product_list', { 'categoryId': 9 }) }}'">FALDAS</h2>
+                        <h2 onclick="onclick=window.location.href='{{ path('celina_product_list', { 'categoryId': 10 }) }}'">CAMISETAS</h2>
+                        <h2 onclick="onclick=window.location.href='{{ path('celina_product_list', { 'categoryId': 12 }) }}'">CHAQUETAS</h2>
+                        <h2 onclick="onclick=window.location.href='{{ path('celina_product_list', { 'categoryId': 13 }) }}'">COMPLEMENTOS</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
 {% endblock %}
